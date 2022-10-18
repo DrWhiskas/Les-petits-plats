@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+.header__logo__hat {
+  height: 20%;
+}
+.header__logo__title {
+  margin-top: 4%;
+}/*# sourceMappingURL=header.css.map */

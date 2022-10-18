@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    justify-content: center;
+    &__logo{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2%;
+        &__hat{
+            height: 20%;
+        }
+        &__title{
+            margin-top: 4%;
+        }
+    }
+}
+

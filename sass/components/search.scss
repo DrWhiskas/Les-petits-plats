@@ -1,0 +1,19 @@
+@import "../utils/variables.scss";
+.search{
+    margin-top: -100px;
+    &__input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__bar{
+            background-color: $search;
+            width: 80%;
+            height: 60px;
+        }
+        &__loop{
+            position: relative;
+            right: 50px;
+
+        }
+    }
+}
