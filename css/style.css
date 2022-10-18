@@ -12,7 +12,7 @@ body {
 /* CARD */
 /* SEARCH */
 .search {
-  margin-top: -2%;
+  margin-top: -100px;
 }
 .search__input {
   display: flex;
@@ -23,6 +23,9 @@ body {
   background-color: #E7E7E7;
   width: 80%;
   height: 60px;
+  padding: 10px;
+  font-size: 25px;
+  border: none;
 }
 .search__input__loop {
   position: relative;

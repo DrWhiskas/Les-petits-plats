@@ -13,6 +13,9 @@
   background-color: #E7E7E7;
   width: 80%;
   height: 60px;
+  padding: 10px;
+  font-size: 25px;
+  border: none;
 }
 .search__input__loop {
   position: relative;

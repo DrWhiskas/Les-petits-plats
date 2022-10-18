@@ -9,11 +9,13 @@
             background-color: $search;
             width: 80%;
             height: 60px;
+            padding: 10px;
+            font-size: 25px;
+            border: none;
         }
         &__loop{
             position: relative;
             right: 50px;
-
         }
     }
 }
