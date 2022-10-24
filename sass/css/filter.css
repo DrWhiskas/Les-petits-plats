@@ -1,1 +1,79 @@
-/*# sourceMappingURL=filter.css.map */
+/* FILTERS */
+/* CARD */
+/* SEARCH */
+.filter {
+  display: flex;
+}
+.filter__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter__items__input {
+  width: 170px;
+  height: 69px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+.filter__items__input::-moz-placeholder {
+  color: white;
+  opacity: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  left: 2%;
+}
+.filter__items__input:-ms-input-placeholder {
+  color: white;
+  opacity: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  left: 2%;
+}
+.filter__items__input::placeholder {
+  color: white;
+  opacity: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  left: 2%;
+}
+.filter__items__arrow {
+  position: relative;
+  right: 20px;
+  place-self: center;
+}
+
+#ingredients {
+  background-color: #3282F7;
+}
+
+#appareils {
+  background-color: #68D9A4;
+}
+
+#ustensiles {
+  background-color: #ED6454;
+}
+
+.oui {
+  color: red;
+}
+
+/* DRODOWN MENU */
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.filter__items__input__dropdown-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  display: none;
+}/*# sourceMappingURL=filter.css.map */

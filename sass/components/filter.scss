@@ -1,0 +1,57 @@
+@import "../utils/variables.scss";
+.filter{
+    display: flex;
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        &__input{
+            width: 170px;
+            height: 69px;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            &::placeholder{
+               color: white;
+               opacity: 100%;
+               font-size: 18px;
+               font-weight: bold;
+               position: relative;
+               left: 2%;
+            }
+        }
+        &__arrow{
+            position: relative;
+            right: 20px;
+            place-self: center;
+        }
+    }
+}
+#ingredients{
+    background-color: $ingredients;
+}
+#appareils{
+    background-color: $appareils ;
+}
+#ustensiles{
+    background-color: $usetensiles;
+}
+
+.oui{
+    color: red;
+}
+
+
+/* DRODOWN MENU */
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.filter__items__input__dropdown-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    display: none;
+}

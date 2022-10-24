@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a9f81c8e8d.js" crossorigin="anonymous"></script>
+    <script src="./js/dropdown.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Les petits plats</title>
 </head>
 <body>
    <header>
@@ -26,8 +27,28 @@
         </section>
         <section class="tag"></section>
         <section class="filter">
-            <input type="button" name="" id="">
+            <div class="filter__menu">
+                <input class="filter__items__input" data-bs-toggle="dropdown" type="text" name="ingredients" id="ingredients" placeholder="Ingredients">
+                <i class="fa-solid fa-chevron-down filter__items__arrow"></i>
+                <ul class="filter__items__input__dropdown-menu" aria-labelledby="ingredients" id="ingredients-item">
+                    <li class="dropdown-item">oui</li>
+                    <li class="dropdown-item">oui</li>
+                </ul>
+            </div>    
+            <div class="dropdown filter__items">
+                <input class="dropdown-toggle filter__items__input" data-bs-toggle="dropdown" type="text" name="appareils" id="appareils" placeholder="Appareils">
+                <i class="fa-solid fa-chevron-down filter__items__arrow "></i>
+            </div>
+            <div class="dropdown filter__items">
+                <input class="dropdown-toggle filter__items__input" data-bs-toggle="dropdown" type="text" name="ustensiles" id="ustensiles" placeholder="Ustensiles">
+                <i class="fa-solid fa-chevron-down filter__items__arrow"></i>
+            </div>
+        </section>
+        
+        <section id="recettes">
+        
         </section>
    </main>
+   
 </body>
 </html>
