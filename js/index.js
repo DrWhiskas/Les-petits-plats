@@ -11,4 +11,10 @@
 
 import { getRecipes } from "./pages/index_page";
 
-console.log(getRecipes);
+export const toto = () =>{
+    getRecipes().then(data => {
+        oui()
+    })
+}
+
+
