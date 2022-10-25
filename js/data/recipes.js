@@ -1724,3 +1724,5 @@ const recipes = [
         "ustensils":["rouleau à patisserie","fouet"]
     }
 ]
+
+const recipesList = recipes; // variabale global contenant les recettes
