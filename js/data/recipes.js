@@ -1725,4 +1725,3 @@ const recipes = [
     }
 ]
 
-const recipesList = recipes; // variabale global contenant les recettes
