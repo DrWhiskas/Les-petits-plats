@@ -60,6 +60,7 @@ recipesDOM();
 /*for(let i = 0; i< recipesList.length ; i++){
   console.log("nom de recette à " + i + " est " + recipesList[i].name);
 }*/
+/*
 let i =0
 let n = 0
   const recipesContent = document.getElementById("recipes");
@@ -73,8 +74,56 @@ for(; n < recipesList[i].ingredients.length; n++)
   `;
 recipesContent.appendChild(recipesItem)
   console.log(recipesList[i].ingredients[n].ingredient)
+  recipesList[i].ingredients[n].ingredient;
   if(n >=  recipesList[i].ingredients.length -1 ){
+
     n = 0
     i += 1
   }
 }  
+*/
+let n = 0  //incrementation recettes 
+let i = 0  //incrementation ingredients
+
+// DOM
+const recipesSection = document.getElementById("recipes");
+
+recipesList.forEach((e) => {
+  const recipesCard = document.createElement("article");
+  recipesCard.classList="recipes__card";
+  /* HEADER */
+  const recipesHeader = document.createElement("header")
+  recipesHeader.classList="recipes__card__header";
+  recipesCard.appendChild(recipesHeader);
+
+  /* ETAPES */
+  const recipeStep = document.createElement("p")
+  recipeStep.classList = "recipes__card__list__description";
+  recipeStep.innerHTML = `
+    ${recipesList[n].description}
+  `;
+
+
+  const recipesName = document.createElement("div")
+  recipesName.classList = "recipes__card__dish-name";
+  recipesName.innerHTML = `
+    <h3 class="recipes__card__dish__title">${recipesList[n].name}</h3>
+    <span class="recipes__card__dish__time"><i class="fa-regular fa-clock"></i>${recipesList[n].time} min</span>
+  `;
+  recipesCard.appendChild(recipesName);
+  for(;i < recipesList[n].ingredients.length;){
+    const newIgredient  = document.createElement("p")
+    newIgredient.classList = "recipes__card__list";
+    newIgredient.innerHTML = `
+      <span class="recipes__card__list__ingredients">${recipesList[n].ingredients[i].ingredient} ${recipesList[n].ingredients[i].quantity} ${recipesList[n].ingredients[i].unit}</span>
+    `;
+    i++
+    recipesCard.appendChild(newIgredient);
+  }
+  recipesCard.appendChild(recipeStep);
+  if (i >= recipesList[n].ingredients.length - 1){
+    i= 0
+    n++
+  }
+    recipesSection.appendChild(recipesCard);
+});

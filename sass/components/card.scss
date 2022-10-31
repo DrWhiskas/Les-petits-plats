@@ -1,0 +1,28 @@
+#recipes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5%;
+    & .recipes__card{
+        width: 30%;
+        height: auto;
+        margin-top: 3%;
+        background-color: $cardBot;
+        &__header{
+            width: 100%;
+            height: 170px;
+            background-color: $cardTop;
+        }
+        &__dish-name{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__dish__title{
+            font-size: 18px;
+        }
+        &__list__ingredients{
+            font-size: 14px;
+        }
+    }
+}

@@ -1,1 +1,18 @@
-/*# sourceMappingURL=card.css.map */
+#recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5%;
+}
+#recipes .recipes__card {
+  width: 30%;
+  height: 364px;
+}
+#recipes .recipes__card__header {
+  height: 170px;
+}
+#recipes .recipes__card__dish-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=card.css.map */
