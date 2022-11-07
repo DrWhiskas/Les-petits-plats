@@ -53,10 +53,9 @@ const searchSelector = document.getElementById("search");
 searchRecipes();
 
 */
-/*
 searchSelector.addEventListener("input", (e) => {
-  //const searchTarget = e.target.value.toLowerCase();
-  //console.log(searchTarget);
-});
 
-*/
+  e.preventDefault()
+  const searchTarget = e.target.value.toLowerCase();
+  console.log(searchTarget);
+});
