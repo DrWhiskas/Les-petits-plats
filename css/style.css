@@ -60,6 +60,12 @@ body {
 #recipes .recipes__card__list__ingredients {
   font-size: 14px;
 }
+#recipes .recipes__card__list__description {
+  color: red;
+}
+#recipes .recipes__card__list {
+  color: blue;
+}
 
 /* FILTERS */
 /* CARD */

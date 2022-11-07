@@ -26,6 +26,8 @@ const newArray = []
     <h3 class="recipes__card__dish__title">${recipe.name}</h3>
     <span class="recipes__card__dish__time"><i class="fa-regular fa-clock"></i>${recipe.time} min</span>
   `;
+      const toto = document.createElement("div")
+      toto.classList="toto"
       recipesCard.appendChild(recipesName);
       for (let i = 0; i < recipe.ingredients.length; ) {
         const newIgredient = document.createElement("p");
@@ -37,11 +39,24 @@ const newArray = []
       recipesCard.appendChild(recipeStep);
       recipesSection.appendChild(recipesCard);
     });
+    
   };
 recipesDisplay(recipes);
+console.log(recipes.ingredients);
 
 const searchSelector = document.getElementById("search");
-
-function searchRecipes(){
-
+/*function searchRecipes() {
+  recipes.ingredients.forEach((ingredients)=>{
+    console.log(ingredients);
+  });
 }
+searchRecipes();
+
+*/
+/*
+searchSelector.addEventListener("input", (e) => {
+  //const searchTarget = e.target.value.toLowerCase();
+  //console.log(searchTarget);
+});
+
+*/
