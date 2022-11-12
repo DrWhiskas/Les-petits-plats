@@ -42,17 +42,16 @@ const newArray = []
     
   };
 recipesDisplay(recipes);
-console.log(recipes.ingredients);
+console.log(recipes.ingredient);
 
 const searchSelector = document.getElementById("search");
-/*function searchRecipes() {
-  recipes.ingredients.forEach((ingredients)=>{
+function searchRecipes() {
+  recipes.forEach((ingredients)=>{
     console.log(ingredients);
   });
 }
 searchRecipes();
 
-*/
 searchSelector.addEventListener("input", (e) => {
 
   e.preventDefault()
