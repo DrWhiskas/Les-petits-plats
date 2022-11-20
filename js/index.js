@@ -27,7 +27,6 @@ const newArray = []
   `;
       const toto = document.createElement("div")
       toto.classList="toto"
-      toto.innerHTML=`oui`
       recipesCard.appendChild(recipesName);
       recipesCard.appendChild(toto)
       for (let i = 0; i < recipe.ingredients.length; ) {
@@ -35,7 +34,8 @@ const newArray = []
         newIgredient.classList = "recipes__card__list";
         newIgredient.innerHTML = `<span class="recipes__card__list__ingredients">${recipe.ingredients[i].ingredient} ${recipe.ingredients[i].quantity} ${recipe.ingredients[i].unit}</span>`;
         i++;
-        recipesCard.appendChild(newIgredient);
+        toto.appendChild(newIgredient);
+
       }
       recipesCard.appendChild(recipeStep);
       recipesSection.appendChild(recipesCard);
@@ -44,14 +44,14 @@ const newArray = []
   };
 recipesDisplay(recipes);
 console.log(recipes.ingredient);
-
+/*
 const searchSelector = document.getElementById("search");
 function searchRecipes() {
   recipes.forEach((ingredients)=>{
     console.log(ingredients);
   });
 }
-searchRecipes();
+//searchRecipes();
 
 searchSelector.addEventListener("input", (e) => {
 
@@ -60,3 +60,4 @@ searchSelector.addEventListener("input", (e) => {
   console.log(searchTarget);
 });
 //newArray.push(recipie)
+*/
