@@ -12,14 +12,13 @@ const newArray = []
       const recipesHeader = document.createElement("header");
       recipesHeader.classList = "recipes__card__header";
       recipesCard.appendChild(recipesHeader);
-
       /* ETAPES */
-      const recipeStep = document.createElement("p");
+      const recipeStep = document.createElement("div");
       recipeStep.classList = "recipes__card__list__description";
       recipeStep.innerHTML = `
     ${recipe.description}
   `;
-
+      /* NAME */
       const recipesName = document.createElement("div");
       recipesName.classList = "recipes__card__dish-name";
       recipesName.innerHTML = `
@@ -28,7 +27,9 @@ const newArray = []
   `;
       const toto = document.createElement("div")
       toto.classList="toto"
+      toto.innerHTML=`oui`
       recipesCard.appendChild(recipesName);
+      recipesCard.appendChild(toto)
       for (let i = 0; i < recipe.ingredients.length; ) {
         const newIgredient = document.createElement("p");
         newIgredient.classList = "recipes__card__list";
