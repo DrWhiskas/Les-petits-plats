@@ -29,13 +29,18 @@ const newArray = []
       recipesIngredient.classList = 'recipes__ingredient';
       recipesCard.appendChild(recipesName);
       recipesCard.appendChild(recipesIngredient);
-      for (let i = 0; i < recipe.ingredients.length; ) {
+     /* for (let i = 0; i < recipe.ingredients.length; ) {
         const newIgredient = document.createElement("p");
         newIgredient.classList = "recipes__card__list";
         newIgredient.innerHTML = `<span class="recipes__card__list__ingredients">${recipe.ingredients[i].ingredient} ${recipe.ingredients[i].quantity} ${recipe.ingredients[i].unit}</span>`;
         i++;
         recipesIngredient.appendChild(newIgredient);
-      }
+      }*/
+
+      recipesArray.forEach((ingredient)=>{
+        let ingredientCard=""
+        recipe.ingredient.map
+      })
       recipesCard.appendChild(recipeStep);
       recipesSection.appendChild(recipesCard);
     });
@@ -43,7 +48,7 @@ const newArray = []
   };
 recipesDisplay(recipes);
 console.log(recipes.ingredient);
-/*
+
 const searchSelector = document.getElementById("search");
 function searchRecipes() {
   recipes.forEach((ingredients)=>{
@@ -59,4 +64,3 @@ searchSelector.addEventListener("input", (e) => {
   console.log(searchTarget);
 });
 //newArray.push(recipie)
-*/
