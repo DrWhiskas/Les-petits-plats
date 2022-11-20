@@ -25,17 +25,16 @@ const newArray = []
     <h3 class="recipes__card__dish__title">${recipe.name}</h3>
     <span class="recipes__card__dish__time"><i class="fa-regular fa-clock"></i>${recipe.time} min</span>
   `;
-      const toto = document.createElement("div")
-      toto.classList="toto"
+      const recipesIngredient = document.createElement("div")
+      recipesIngredient.classList = 'recipes__ingredient';
       recipesCard.appendChild(recipesName);
-      recipesCard.appendChild(toto)
+      recipesCard.appendChild(recipesIngredient);
       for (let i = 0; i < recipe.ingredients.length; ) {
         const newIgredient = document.createElement("p");
         newIgredient.classList = "recipes__card__list";
         newIgredient.innerHTML = `<span class="recipes__card__list__ingredients">${recipe.ingredients[i].ingredient} ${recipe.ingredients[i].quantity} ${recipe.ingredients[i].unit}</span>`;
         i++;
-        toto.appendChild(newIgredient);
-
+        recipesIngredient.appendChild(newIgredient);
       }
       recipesCard.appendChild(recipeStep);
       recipesSection.appendChild(recipesCard);
