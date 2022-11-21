@@ -36,11 +36,6 @@ const newArray = []
         i++;
         recipesIngredient.appendChild(newIgredient);
       }*/
-
-      recipesArray.forEach((ingredient)=>{
-        let ingredientCard=""
-        recipe.ingredient.map
-      })
       recipesCard.appendChild(recipeStep);
       recipesSection.appendChild(recipesCard);
     });
