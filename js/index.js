@@ -62,5 +62,7 @@ searchSelector.addEventListener("input", (e) => {
   e.preventDefault()
   const searchTarget = e.target.value.toLowerCase();
   console.log(searchTarget);
+  newArray.push(recipie);
+  console.log(newArray);
 });
 //newArray.push(recipie)
