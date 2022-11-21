@@ -29,40 +29,78 @@ const newArray = []
       recipesIngredient.classList = 'recipes__ingredient';
       recipesCard.appendChild(recipesName);
       recipesCard.appendChild(recipesIngredient);
-     /* for (let i = 0; i < recipe.ingredients.length; ) {
+      for (let i = 0; i < recipe.ingredients.length; ) {
         const newIgredient = document.createElement("p");
         newIgredient.classList = "recipes__card__list";
         newIgredient.innerHTML = `<span class="recipes__card__list__ingredients">${recipe.ingredients[i].ingredient} ${recipe.ingredients[i].quantity} ${recipe.ingredients[i].unit}</span>`;
         i++;
         recipesIngredient.appendChild(newIgredient);
-      }*/
+      }
+
       recipesCard.appendChild(recipeStep);
       recipesSection.appendChild(recipesCard);
     });
     
   };
 recipesDisplay(recipes);
-console.log(recipes.ingredient);
-
+/*
 const searchSelector = document.getElementById("search");
-function searchRecipes() {
-  recipes.forEach((ingredients)=>{
-    console.log(ingredients);
-  });
-}
-//searchRecipes();
 
-searchSelector.addEventListener("input", (e) => {
+searchSelector.addEventListener('input', (e) => {
+	const searchKey = e.target.value;
+	const card = document.querySelectorAll(".recipes__card")
+  searchRecipes(searchKey, card);
+	newArray.forEach((array) => {});
+})
 
+function searchRecipes(searchingKey, toto) {
+  if (searchingKey.length > 2) {
+    for(let i = 0; i < recipe.length; i++){
+      if (toto[i].textContent.toLowerCase().includes(searchingKey)) {
+				toto[i].style.display = 'block';
+				newArray.push(recipies)
+			}
+      else{
+        toto[i].style.display = 'noen';
+      }
+    }
+	}
+}*/
+  /*
   e.preventDefault()
   const searchTarget = e.target.value.toLowerCase();
   newArray.forEach((recipe) =>{
-    
+    if ()
     const isVisible = newArray.name.include(value)
     console.log("oui");
   })
+
    console.log(searchTarget);
   newArray.push(recipes);
   console.log(newArray);
-});
+
+//);
+*/
 //newArray.push(recipie)
+
+const searchSelection = document.getElementById('search');
+
+searchSelection.addEventListener('keyup', (e) =>{
+  const searchKey = e.target.value;
+  searchRecipe(searchKey);
+
+})
+
+function searchRecipe(keys){
+  if(keys.length >2 ){
+    recipes.forEach((recipe)=>{
+      //console.log(toto.name);
+      if (recipe.name.toLowerCase().includes(keys)) {
+				//console.log("oui");
+				newArray.push(recipe);
+				console.log(newArray);
+			}
+    })
+  }
+}
+
