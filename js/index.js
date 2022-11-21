@@ -56,8 +56,13 @@ searchSelector.addEventListener("input", (e) => {
 
   e.preventDefault()
   const searchTarget = e.target.value.toLowerCase();
-  console.log(searchTarget);
-  newArray.push(recipie);
+  newArray.forEach((recipe) =>{
+    
+    const isVisible = newArray.name.include(value)
+    console.log("oui");
+  })
+   console.log(searchTarget);
+  newArray.push(recipes);
   console.log(newArray);
 });
 //newArray.push(recipie)
