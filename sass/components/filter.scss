@@ -1,6 +1,8 @@
 @import "../utils/variables.scss";
 .filter{
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     &__items{
         display: flex;
         flex-wrap: wrap;
@@ -10,13 +12,8 @@
             border-radius: 5px;
             color: white;
             border: none;
-            &::placeholder{
-               color: white;
-               opacity: 100%;
-               font-size: 18px;
-               font-weight: bold;
-               position: relative;
-               left: 2%;
+            &:hover{
+                cursor: pointer;
             }
         }
         &__arrow{

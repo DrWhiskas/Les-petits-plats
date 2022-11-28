@@ -2,7 +2,7 @@ body {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 3%;
 }
 
 /* FILTERS */
@@ -21,7 +21,7 @@ body {
 }
 .search__input__bar {
   background-color: #E7E7E7;
-  width: 80%;
+  width: 88%;
   height: 60px;
   padding: 10px;
   font-size: 25px;
@@ -72,6 +72,8 @@ body {
 /* SEARCH */
 .filter {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .filter__items {
   display: flex;
@@ -84,29 +86,8 @@ body {
   color: white;
   border: none;
 }
-.filter__items__input::-moz-placeholder {
-  color: white;
-  opacity: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  position: relative;
-  left: 2%;
-}
-.filter__items__input:-ms-input-placeholder {
-  color: white;
-  opacity: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  position: relative;
-  left: 2%;
-}
-.filter__items__input::placeholder {
-  color: white;
-  opacity: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  position: relative;
-  left: 2%;
+.filter__items__input:hover {
+  cursor: pointer;
 }
 .filter__items__arrow {
   position: relative;

@@ -3,6 +3,8 @@
 /* SEARCH */
 .filter {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .filter__items {
   display: flex;
@@ -15,29 +17,8 @@
   color: white;
   border: none;
 }
-.filter__items__input::-moz-placeholder {
-  color: white;
-  opacity: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  position: relative;
-  left: 2%;
-}
-.filter__items__input:-ms-input-placeholder {
-  color: white;
-  opacity: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  position: relative;
-  left: 2%;
-}
-.filter__items__input::placeholder {
-  color: white;
-  opacity: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  position: relative;
-  left: 2%;
+.filter__items__input:hover {
+  cursor: pointer;
 }
 .filter__items__arrow {
   position: relative;
