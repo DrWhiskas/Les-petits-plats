@@ -7,6 +7,7 @@ searchSelection.addEventListener('keyup', (e) => {
 	const searchKey = e.target.value;
 	searchRecipe(searchKey);
 	searchAppliance(searchKey);
+	recipesDisplay(newArray);
 });
 function searchRecipe(keys) {
 	if (keys.length > 2) {
@@ -14,17 +15,15 @@ function searchRecipe(keys) {
 			/* RECIPES TITLES */
 			if (recipe.name.toLowerCase().includes(keys)) {
 				newArray.push(recipe);
-				console.log(newArray, 'inesta');
-				recipesSection.innerHTML = '';
-				recipesDisplay(newArray);
+				//recipesSection.innerHTML = '';
+				//recipesDisplay(newArray);
 			}
 			/* USTENSILS */
 			recipe.ustensils.forEach((shakira) => {
-				if (shakira.toLowerCase().includes(keys)) {
+				 if (shakira.toLowerCase().includes(keys)) {
 					newArray.push(recipe);
-					console.log(newArray, 'shakira');
-					recipesSection.innerHTML = '';
-					recipesDisplay(newArray);
+					//recipesSection.innerHTML = '';
+					//recipesDisplay(newArray);
 				}
 			});
 		});
@@ -39,9 +38,8 @@ function searchAppliance(keys) {
 		recipes.forEach((recipe) => {
 			if (recipe.appliance.toLowerCase().includes(keys)) {
 				newArray.push(recipe);
-				console.log(newArray, 'me gusta');
 				recipesSection.innerHTML = '';
-				recipesDisplay(newArray);
+				//recipesDisplay(newArray);
 			}
 		});
 	} else {

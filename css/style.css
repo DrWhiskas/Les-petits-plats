@@ -61,10 +61,10 @@ body {
   font-size: 14px;
 }
 #recipes .recipes__card__list__description {
-  color: red;
+  color: black;
 }
 #recipes .recipes__card__list {
-  color: blue;
+  color: black;
 }
 
 /* FILTERS */
@@ -74,6 +74,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-left: 6%;
+  margin-top: 2%;
 }
 .filter__items {
   display: flex;
