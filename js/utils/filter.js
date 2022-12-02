@@ -11,11 +11,9 @@ const ustensilesSelector = document.getElementById('ustensiles');
 
 const buttonSelector = document.querySelectorAll('.filter__items__input');
 
-console.log(buttonSelector);
 
 ustensilesSelector.addEventListener('click', (e) => {
 	getUstensiles(recipes)
-	console.log(arrayUstensils);
 });
 
 /* usetensils */
