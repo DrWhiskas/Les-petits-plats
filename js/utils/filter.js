@@ -18,8 +18,16 @@ ustensilesSelector.addEventListener('click', (e) => {
 
 /* usetensils */
 function getUstensiles(data) {
+	const listselector = document.getElementById('sadge')
+	
 	data.forEach((recipe) => {
 		arrayUstensils.push(recipe.ustensils);
+		const newList = document.createElement('li');
+		newList.classList.add('oui');
+		newList.innerHTML = `
+		<li>${recipe.ustensils}</li>
+		`;
+		document.body.appendChild(newList);
 	});
 }
 

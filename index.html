@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/a9f81c8e8d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Les petits plats</title>
-</head>
-<body>
-   <header>
-        <section class="header">
-            <div class="header__logo">
-                <img class="header__logo__hat" src="./images/logoToque.svg" alt="">
-                <img class="header__logo__title" src="./images/logoTitle.svg" alt="">
-            </div>
-        </section>
-   </header>
-   <main>
-        <section class="search">
-            <form action="" class="search__input">
-                <input type="text" name="search" id="search" class="search__input__bar" placeholder="Rechercher une recette">
-                <i class="fa-solid fa-magnifying-glass fa-2x search__input__loop "></i>
-            </form>
-        </section>
-        <section class="tag"></section>
-        <section class="filter">
-            <div class="filter__menu">
-                <input class="filter__items__input"  type="button" name="ingredients" id="ingredients" value="ingredients">
-                <i class="fa-solid fa-chevron-down filter__items__arrow"></i>
-            </div>    
-            <div class="filter__menu">
-                <input class="filter__items__input" type="button" name="appareils" id="appareils" value="appareils">
-                <i class="fa-solid fa-chevron-down filter__items__arrow "></i>
-            </div>
-            <div class="filter__menu">
-                <input class="filter__items__input"  type="button" name="ustensiles" id="ustensiles" value="ustensiles">
-                <i class="fa-solid fa-chevron-down filter__items__arrow"></i>
-            </div>
-        </section>
-        <section id="recipes">
-            
-        </section>
-   </main>
-   
-</body>
-    <script src="./js/data/recipes.js"></script>
-    <script src="/js/utils/recipes_card.js"></script>
-    <script src="./js/utils/searchBar.js"></script>
-    <script src="./js/utils/filter.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/a9f81c8e8d.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Les petits plats</title>
+	</head>
+	<body>
+		<header>
+			<section class="header">
+				<div class="header__logo">
+					<img class="header__logo__hat" src="./images/logoToque.svg" alt="" />
+					<img
+						class="header__logo__title"
+						src="./images/logoTitle.svg"
+						alt=""
+					/>
+				</div>
+			</section>
+		</header>
+		<main>
+			<section class="search">
+				<form action="" class="search__input">
+					<input
+						type="text"
+						name="search"
+						id="search"
+						class="search__input__bar"
+						placeholder="Rechercher une recette"
+					/>
+					<i class="fa-solid fa-magnifying-glass fa-2x search__input__loop"></i>
+				</form>
+			</section>
+			<section class="tag"></section>
+			<section class="filter">
+				<div class="filter__menu">
+					<input
+						class="filter__items__input"
+						type="button"
+						name="ingredients"
+						id="ingredients"
+						value="ingredients"
+					/>
+					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
+				</div>
+				<div class="filter__menu">
+					<input
+						class="filter__items__input"
+						type="button"
+						name="appareils"
+						id="appareils"
+						value="appareils"
+					/>
+					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
+				</div>
+				<div class="filter__menu">
+					<input
+						class="filter__items__input"
+						type="button"
+						name="ustensiles"
+						id="ustensiles"
+						value="ustensiles"
+					/>
+					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
+					<div class="test" id="gazo">
+                        <input type="text" name="gazo" id="sadge">
+                        <div class="list"></div>
+                    </div>
+				</div>
+			</section>
+			<section id="recipes"></section>
+		</main>
+	</body>
+	<script src="./js/data/recipes.js"></script>
+	<script src="/js/utils/recipes_card.js"></script>
+	<script src="./js/utils/searchBar.js"></script>
+	<script src="./js/utils/filter.js"></script>
 </html>

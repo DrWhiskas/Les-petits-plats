@@ -54,3 +54,24 @@ a{
     gap: 60px;
     display: none;
 }
+
+/* TESTS */ 
+
+#gazo{
+    height: 397px;
+    width: 667px;
+    background: $usetensiles;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#sadge{
+    width: 100%;
+    background: $usetensiles;
+    color: white;
+    border: none;
+    height: 10%;
+}
+.list{
+    height: auto;
+    color: blue;
+}
