@@ -3,6 +3,8 @@ let arrayIngredients = []
 let arrayAppliance = [];
 let arrayUstensils = [];
 
+let filterArray = []
+
 let checkIngredient = false
 let checkUstensil = false
 let checkApplicances = false
@@ -13,6 +15,8 @@ const ingredientSelector = document.getElementById('ingredients');
 const appareilsSelector = document.getElementById('appareils');
 const ustensilesSelector = document.getElementById('ustensiles');
 
+const test = document.getElementById('filter__box__ingredients');
+
 const buttonSelector = document.querySelectorAll('.filter__items__input');
 
 
@@ -20,9 +24,9 @@ appareilsSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkApplicances = true
 	getArray(arrayAppliance);
+	test.innerText='oui'
 	appareilsSelector.style.width = '667px';
-	//displayData(arrayAppliance);
-
+	console.log(arrayAppliance);
 
 	
 });
@@ -66,3 +70,6 @@ function getArray (testArray){
 	
 }
 
+function displayData(nArray){
+
+}
