@@ -13,34 +13,38 @@ const ingredientSelector = document.getElementById('ingredients');
 const appareilsSelector = document.getElementById('appareils');
 const ustensilesSelector = document.getElementById('ustensiles');
 
-const test = document.getElementById('gazo')
 const buttonSelector = document.querySelectorAll('.filter__items__input');
 
 
 appareilsSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkApplicances = true
-	toto(arrayAppliance);
+	getArray(arrayAppliance);
+	appareilsSelector.style.width = '667px';
+	//displayData(arrayAppliance);
+
+
 	
 });
 
 ingredientSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkIngredient = true;
-	toto(arrayIngredients);
+	getArray(arrayIngredients);
 	console.log(arrayIngredients);
 	
 });
 ustensilesSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkUstensil = true
-	toto(arrayUstensils);
+	getArray(arrayUstensils);
 	console.log(arrayUstensils);
 });
 
+
 /* GET DATA */
 
-function toto (testArray){
+function getArray (testArray){
 	recipes.forEach((recipe) => {
 		if (checkIngredient == true) {
 			recipe.ingredients.forEach((ingredient) => {
@@ -61,3 +65,4 @@ function toto (testArray){
 	});
 	
 }
+
