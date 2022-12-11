@@ -24,10 +24,7 @@ appareilsSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkApplicances = true
 	getArray(arrayAppliance);
-	test.innerText='oui'
-	appareilsSelector.style.width = '667px';
-	console.log(arrayAppliance);
-
+	displayData(arrayAppliance)
 	
 });
 
@@ -35,6 +32,7 @@ ingredientSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkIngredient = true;
 	getArray(arrayIngredients);
+	displayData(checkIngredient);
 	console.log(arrayIngredients);
 	
 });
@@ -42,6 +40,7 @@ ustensilesSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkUstensil = true
 	getArray(arrayUstensils);
+	displayData(arrayUstensils);
 	console.log(arrayUstensils);
 });
 
@@ -71,5 +70,14 @@ function getArray (testArray){
 }
 
 function displayData(nArray){
-
+	//nArray = Array.from(nArray);
+	nArray = [...new Set(nArray)];
+	nArray.forEach((item) =>{
+		const list = document.createElement('li');
+		list.classList.add('filter__box__list');
+		list.innerHTML=`${item}`	
+		test.appendChild(list);
+	})
+	
+	
 }
