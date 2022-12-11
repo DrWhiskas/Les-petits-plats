@@ -33,7 +33,6 @@ ingredientSelector.addEventListener('click', (e) => {
 	checkIngredient = true;
 	getArray(arrayIngredients);
 	displayData(checkIngredient);
-	console.log(arrayIngredients);
 	
 });
 ustensilesSelector.addEventListener('click', (e) => {
@@ -41,7 +40,6 @@ ustensilesSelector.addEventListener('click', (e) => {
 	checkUstensil = true
 	getArray(arrayUstensils);
 	displayData(arrayUstensils);
-	console.log(arrayUstensils);
 });
 
 
@@ -71,6 +69,7 @@ function getArray (testArray){
 
 function displayData(nArray){
 	//nArray = Array.from(nArray);
+	test.innerHTML = '';	
 	nArray = [...new Set(nArray)];
 	nArray.forEach((item) =>{
 		const list = document.createElement('li');
