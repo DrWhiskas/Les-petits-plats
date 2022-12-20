@@ -36,10 +36,11 @@ function searchRecipe(keys) {
 					newArray.push(recipe);
 				}
 			})
+
 		})
 	} else {
-		recipesSection.innerHTML = '';
-		recipesDisplay(recipes);
+		//console.log(keys.length);
+		//document.body.innerHTML = ``;
 	}
 	newArray = [...new Set(newArray)];
 }

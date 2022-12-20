@@ -33,12 +33,11 @@ appareilsSelector.addEventListener('click', (e) => {
 
 	
 });
-
+/*
 ingredientSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkIngredient = true;
 	setList(newArray);
-	//displayData(test, newArray);
 	console.log(newArray);
 	
 });
@@ -48,7 +47,7 @@ ustensilesSelector.addEventListener('click', (e) => {
 	setList(arrayUstensils);
 	//displayData(filterUsetensil, arrayUstensils);
 });
-
+*/
 
 
 /* GET DATA */
