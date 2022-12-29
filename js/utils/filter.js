@@ -21,19 +21,25 @@ const filterUsetensil = document.getElementById('filter__box__usetensils');
 
 const buttonSelector = document.querySelectorAll('.filter__items__input');
 
+
+/* MENU */
+const menuApp = document.getElementById('filter__app');
+
 /* FILTERS */
 
 appareilsSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkApplicances = true
 	console.log(newArray);
+	toggleList(menuApp);
 	setList(newArray);
+	
 	//displayData(filterAppareil, newArray);
 	
 
 	
 });
-/*
+
 ingredientSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkIngredient = true;
@@ -47,7 +53,7 @@ ustensilesSelector.addEventListener('click', (e) => {
 	setList(arrayUstensils);
 	//displayData(filterUsetensil, arrayUstensils);
 });
-*/
+
 
 
 /* GET DATA */
@@ -56,6 +62,7 @@ function setList (testArray){
 	let appList = []
 		recipes.forEach((recipe) => {
 		if (checkIngredient == true) {
+			
 			recipe.ingredients.forEach((ingredient) => {
 				
 			})
@@ -69,6 +76,7 @@ function setList (testArray){
 		}
 		if (checkApplicances = true){
 			// creer nouveau tableau 
+			
 			appList.push(recipe.appliance)
 			//filterAppareil.innerHTML += `<li> ${recipe.appliance} </li>`;
 
@@ -77,19 +85,10 @@ function setList (testArray){
 	});
 	appList = [...new Set(appList)];
 	appList.forEach((app) =>{
-		filterAppareil.innerHTML+=`<li> ${app}</li>`
+		filterAppareil.innerHTML+=`<li class="filter__item"> ${app}</li>`
 	})
 }
 
-function displayData(target ,nArray){
-	//nArray = Array.from(nArray);
-	target.innerHTML = '';	
-	nArray = [...new Set(nArray)];
-	nArray.forEach((item) =>{
-		const list = document.createElement('li');
-		list.classList.add('filter__box__list');
-		list.innerHTML=`${item}`	
-		target.appendChild(list);
-	})
-
+function toggleList(filter){
+	filter.classList.toggle("oui")
 }

@@ -1,0 +1,1 @@
+const tagSelector = document.querySelectorAll('.filter__item');
