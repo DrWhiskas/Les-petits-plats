@@ -24,6 +24,7 @@ const buttonSelector = document.querySelectorAll('.filter__items__input');
 
 /* MENU */
 const menuApp = document.getElementById('filter__app');
+const menuUse = document.getElementById('filter__usetensils');
 
 /* FILTERS */
 
@@ -33,11 +34,6 @@ appareilsSelector.addEventListener('click', (e) => {
 	console.log(newArray);
 	toggleList(menuApp);
 	setList(newArray);
-	
-	//displayData(filterAppareil, newArray);
-	
-
-	
 });
 
 ingredientSelector.addEventListener('click', (e) => {
@@ -49,9 +45,10 @@ ingredientSelector.addEventListener('click', (e) => {
 });
 ustensilesSelector.addEventListener('click', (e) => {
 	e.preventDefault();
-	checkUstensil = true
-	setList(arrayUstensils);
-	//displayData(filterUsetensil, arrayUstensils);
+	checkUstensil = true;
+	console.log(newArray);
+	toggleList(filter__usetensils);
+	setList(newArray);
 });
 
 
@@ -60,6 +57,7 @@ ustensilesSelector.addEventListener('click', (e) => {
 
 function setList (testArray){
 	let appList = []
+	let usetensilList =[]
 		recipes.forEach((recipe) => {
 		if (checkIngredient == true) {
 			
@@ -70,13 +68,12 @@ function setList (testArray){
 		} 
 		if (checkUstensil == true) {
 			recipe.ustensils.forEach((ustensil) =>{
-			testArray.push(ustensil);
+			usetensilList.push(ustensil);
 			})
 			checkUstensil = false
 		}
 		if (checkApplicances = true){
 			// creer nouveau tableau 
-			
 			appList.push(recipe.appliance)
 			//filterAppareil.innerHTML += `<li> ${recipe.appliance} </li>`;
 
@@ -87,6 +84,10 @@ function setList (testArray){
 	appList.forEach((app) =>{
 		filterAppareil.innerHTML+=`<li class="filter__item"> ${app}</li>`
 	})
+	usetensilList = [...new Set(usetensilList)];
+	usetensilList.forEach((use) => {
+		filterUsetensil.innerHTML += `<li class="filter__item"> ${use}</li>`;
+	});
 }
 
 function toggleList(filter){
