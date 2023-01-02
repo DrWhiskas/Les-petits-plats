@@ -48,7 +48,7 @@ ingredientSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkIngredient = true;
 	console.log(newArray);
-	toggleList(menuApp);
+	toggleList(menung);
 	setList(newArray);
 	
 });
@@ -58,11 +58,11 @@ ustensilesSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkUstensil = true;
 	console.log(newArray);
-	toggleList(filter__usetensils);
+	toggleList(menuUse);
 	setList(newArray);
 });
 
-
+/* chevron => aficher pas remplir  */
 
 /* GET DATA */
 
@@ -72,7 +72,6 @@ function setList (testArray){
 	let toto = []
 		recipes.forEach((recipe) => {
 		if (checkIngredient == true) {
-			
 			recipe.ingredients.forEach((ingredient) => {
 				toto.push(ingredient)
 				console.log(ingredient);
@@ -87,6 +86,7 @@ function setList (testArray){
 		}
 		if (checkApplicances = true){
 			// creer nouveau tableau 
+			filterAppareil.innerHTML =``
 			appList.push(recipe.appliance)
 			//filterAppareil.innerHTML += `<li> ${recipe.appliance} </li>`;
 
@@ -97,11 +97,12 @@ function setList (testArray){
 	appList.forEach((app) => {
 		filterAppareil.innerHTML += `<li class="filter__item"> ${app}</li>`;
 	});
-	/*usetensilList = [...new Set(usetensilList)];
+
+	usetensilList = [...new Set(usetensilList)];
 	usetensilList.forEach((use) => {
+		console.log(use);
 		filterUsetensil.innerHTML += `<li class="filter__item"> ${use}</li>`;
 	});
-	*/
 	 createTag();
 }
 
@@ -109,6 +110,9 @@ function toggleList(filter){
 	filter.classList.toggle('visible')
 	if(checkApplicances == true){
 		filter.style.backgroundColor = '#68D9A4';
+	}
+	else if (checkUstensil == true){
+		filter.style.backgroundColor = '#ED6454';
 	}
 
 

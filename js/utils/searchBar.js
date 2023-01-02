@@ -6,14 +6,15 @@ const recipesSection = document.getElementById('recipes');
 searchSelection.addEventListener('keyup', (e) => {
 	const searchKey = e.target.value;
 	searchRecipe(searchKey);
-	recipesSection.innerHTML = '';
-	recipesDisplay(newArray);
+	
 });
 
 
 /* TRAITEMENT DE LA BARRE DE RECHERCHE */
 
 function searchRecipe(keys) {
+	recipesSection.innerHTML = '';
+	newArray = []
 	if (keys.length > 2) {
 		recipes.forEach((recipe) => {
 			/* RECIPES TITLES */
@@ -38,9 +39,12 @@ function searchRecipe(keys) {
 			})
 
 		})
+		newArray = [...new Set(newArray)];
+		recipesDisplay(newArray);
 	} else {
 		recipesDisplay(recipes);
+		console.log(newArray);
 
 	}
-	newArray = [...new Set(newArray)];
+	
 }

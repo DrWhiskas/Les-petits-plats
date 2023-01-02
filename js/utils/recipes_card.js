@@ -1,5 +1,4 @@
 function recipesDisplay(recipesArray) {
-	let n = 0; //incrementation recettes
 	const recipesSection = document.getElementById('recipes');
 
 	recipesArray.forEach((recipe) => {
@@ -33,7 +32,6 @@ function recipesDisplay(recipesArray) {
 			i++;
 			recipesIngredient.appendChild(newIgredient);
 		}
-
 		recipesCard.appendChild(recipeStep);
 		recipesSection.appendChild(recipesCard);
 	});
