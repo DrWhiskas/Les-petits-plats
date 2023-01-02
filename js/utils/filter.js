@@ -25,6 +25,10 @@ const buttonSelector = document.querySelectorAll('.filter__items__input');
 /* MENU */
 const menuApp = document.getElementById('filter__app');
 const menuUse = document.getElementById('filter__usetensils');
+const menung = document.getElementById('filter__ing');
+ 
+
+
 
 /* FILTERS */
 
@@ -32,15 +36,16 @@ appareilsSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkApplicances = true
 	console.log(newArray);
-	toggleList(menuApp);
+	toggleList(menung);
 	setList(newArray);
 });
 
 ingredientSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkIngredient = true;
-	setList(newArray);
 	console.log(newArray);
+	toggleList(menuApp);
+	setList(newArray);
 	
 });
 ustensilesSelector.addEventListener('click', (e) => {
@@ -58,11 +63,13 @@ ustensilesSelector.addEventListener('click', (e) => {
 function setList (testArray){
 	let appList = []
 	let usetensilList =[]
+	let toto = []
 		recipes.forEach((recipe) => {
 		if (checkIngredient == true) {
 			
 			recipe.ingredients.forEach((ingredient) => {
-				
+				toto.push(ingredient)
+				console.log(ingredient);
 			})
 			checkIngredient = false;
 		} 
@@ -88,6 +95,7 @@ function setList (testArray){
 	usetensilList.forEach((use) => {
 		filterUsetensil.innerHTML += `<li class="filter__item"> ${use}</li>`;
 	});
+	 creatTag();
 }
 
 function toggleList(filter){
