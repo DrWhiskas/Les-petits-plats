@@ -39,8 +39,8 @@ function searchRecipe(keys) {
 
 		})
 	} else {
-		//console.log(keys.length);
-		//document.body.innerHTML = ``;
+		recipesDisplay(recipes);
+
 	}
 	newArray = [...new Set(newArray)];
 }

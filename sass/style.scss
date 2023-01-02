@@ -5,6 +5,27 @@
 @import "./components/filter.scss";
 @import "./layout/header.scss";
 
-.filter__box{
 
+#tag{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.tag{
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: red;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.filter__menu{
+    margin-left: 5%;
+    color: white;
+}
+.filter__menu ::placeholder{
+    color: white;
+    padding: 10%;
+    left: 10%;
 }

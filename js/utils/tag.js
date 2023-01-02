@@ -1,36 +1,5 @@
 const tagSelector = document.getElementById('tag');
 
-
-/*
-function creatTag(){
-const tagItems = document.querySelectorAll('.filter__item');
-	tagItems.forEach((item) => {
-		console.log(item);
-		item.addEventListener('click', addTag)
-})
-}
-function addTag(event) {
-    let newTag = event.target.textContent;
-    let tag = document.createElement('span')
-    tag.classList.add('tag')
-    tag.textContent = newTag;
-    tagSelector.appendChild(tag)
-}
-*/
-/*
-function createTag(){
-    let text = target.textContent
-    let tag = document.createElement('span')
-    tag.classList.add('tag');
-	tag.textContent = text;
-	
-	document.body.appendChild(tag);
-}
-  function removeTag(event) {
-		var tag = event.target;
-		tag.parentNode.removeChild(tag);
-	}
-    */
    function createTag(){
     const tagItems = document.querySelectorAll('.filter__item')
     tagItems.forEach((item) => {
@@ -38,11 +7,12 @@ function createTag(){
            let text = e.target.textContent;
            let tag = document.createElement('span')
             tag.classList.add('tag');
-		    tag.textContent = text;
-            tag.addEventListener('click', removeTag);
-           tagSelector.appendChild(tag)
-           this.parentNode.removeChild(item)
-           
+		    tag.innerHTML = `
+                ${text} <i class="fa-regular fa-circle-xmark"></i>
+            `;
+            item.remove();
+           tagSelector.appendChild(tag)  
+           tag.addEventListener('click',removeTag)         
         })
     })
    }

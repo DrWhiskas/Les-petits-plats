@@ -101,16 +101,29 @@ body {
   background-color: #3282F7;
 }
 
+#ingredients ::-moz-placeholder {
+  color: white;
+  width: 85%;
+}
+
+#ingredients :-ms-input-placeholder {
+  color: white;
+  width: 85%;
+}
+
+#ingredients ::placeholder {
+  color: white;
+  width: 85%;
+}
+
 #appareils {
   background-color: #68D9A4;
+  width: 85%;
 }
 
 #ustensiles {
   background-color: #ED6454;
-}
-
-.oui {
-  color: red;
+  width: 85%;
 }
 
 /* DRODOWN MENU */
@@ -152,6 +165,10 @@ a {
   color: blue;
 }
 
+.visible {
+  height: auto;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -166,4 +183,42 @@ a {
 }
 .header__logo__title {
   margin-top: 4%;
+}
+
+#tag {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tag {
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: red;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.filter__menu {
+  margin-left: 5%;
+  color: white;
+}
+
+.filter__menu ::-moz-placeholder {
+  color: white;
+  padding: 10%;
+  left: 10%;
+}
+
+.filter__menu :-ms-input-placeholder {
+  color: white;
+  padding: 10%;
+  left: 10%;
+}
+
+.filter__menu ::placeholder {
+  color: white;
+  padding: 10%;
+  left: 10%;
 }/*# sourceMappingURL=style.css.map */

@@ -33,14 +33,17 @@ const menung = document.getElementById('filter__ing');
 
 /* FILTERS */
 
+/* APPAREILS */
 appareilsSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkApplicances = true
 	console.log(newArray);
-	toggleList(menung);
+	toggleList(menuApp);
 	setList(newArray);
+	
 });
 
+/* INGREDIENT */
 ingredientSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkIngredient = true;
@@ -49,6 +52,8 @@ ingredientSelector.addEventListener('click', (e) => {
 	setList(newArray);
 	
 });
+
+/* USETENSILS */
 ustensilesSelector.addEventListener('click', (e) => {
 	e.preventDefault();
 	checkUstensil = true;
@@ -101,5 +106,10 @@ function setList (testArray){
 }
 
 function toggleList(filter){
-	filter.classList.toggle("oui")
+	filter.classList.toggle('visible')
+	if(checkApplicances == true){
+		filter.style.backgroundColor = '#68D9A4';
+	}
+
+
 }

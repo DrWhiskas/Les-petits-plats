@@ -32,16 +32,29 @@
   background-color: #3282F7;
 }
 
+#ingredients ::-moz-placeholder {
+  color: white;
+  width: 85%;
+}
+
+#ingredients :-ms-input-placeholder {
+  color: white;
+  width: 85%;
+}
+
+#ingredients ::placeholder {
+  color: white;
+  width: 85%;
+}
+
 #appareils {
   background-color: #68D9A4;
+  width: 85%;
 }
 
 #ustensiles {
   background-color: #ED6454;
-}
-
-.oui {
-  color: red;
+  width: 85%;
 }
 
 /* DRODOWN MENU */
@@ -81,4 +94,8 @@ a {
 .list {
   height: auto;
   color: blue;
+}
+
+.visible {
+  height: auto;
 }/*# sourceMappingURL=filter.css.map */
