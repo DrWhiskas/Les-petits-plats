@@ -30,6 +30,7 @@ const menung = document.getElementById('filter__ing');
 
 
 
+
 /* FILTERS */
 
 appareilsSelector.addEventListener('click', (e) => {
@@ -88,14 +89,15 @@ function setList (testArray){
 		checkApplicances = false
 	});
 	appList = [...new Set(appList)];
-	appList.forEach((app) =>{
-		filterAppareil.innerHTML+=`<li class="filter__item"> ${app}</li>`
-	})
-	usetensilList = [...new Set(usetensilList)];
+	appList.forEach((app) => {
+		filterAppareil.innerHTML += `<li class="filter__item"> ${app}</li>`;
+	});
+	/*usetensilList = [...new Set(usetensilList)];
 	usetensilList.forEach((use) => {
 		filterUsetensil.innerHTML += `<li class="filter__item"> ${use}</li>`;
 	});
-	 creatTag();
+	*/
+	 createTag();
 }
 
 function toggleList(filter){
