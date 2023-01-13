@@ -20,6 +20,7 @@ function searchRecipe(keys) {
 			/* RECIPES TITLES */
 			if (recipe.name.toLowerCase().includes(keys)) {
 				newArray.push(recipe);
+				remplissage();
 			}
 			/* USTENSILS */
 			recipe.ustensils.forEach((ustensil) => {

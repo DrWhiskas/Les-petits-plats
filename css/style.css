@@ -221,4 +221,16 @@ a {
   color: white;
   padding: 10%;
   left: 10%;
+}
+
+.hidden {
+  display: hidden;
+}
+
+.active {
+  display: block;
+}
+
+li {
+  color: red;
 }/*# sourceMappingURL=style.css.map */

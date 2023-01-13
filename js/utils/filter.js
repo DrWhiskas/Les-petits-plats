@@ -35,32 +35,44 @@ const menung = document.getElementById('filter__ing');
 
 /* APPAREILS */
 appareilsSelector.addEventListener('click', (e) => {
-	e.preventDefault();
-	checkApplicances = true
-	console.log(newArray);
-	toggleList(menuApp);
-	setList(newArray);
+	checkApplicances = !checkApplicances
+	if(checkApplicances){
+		console.log(checkApplicances);
+		filterAppareil.classList.remove('hidden')
+		filterAppareil.classList.add('active');
+	}
+	else{
+		filterAppareil.classList.add('hidden');
+		filterAppareil.innerHTML=``
+		console.log(checkApplicances);
+	}
 	
 });
 
 /* INGREDIENT */
 ingredientSelector.addEventListener('click', (e) => {
-	e.preventDefault();
 	checkIngredient = true;
-	console.log(newArray);
-	toggleList(menung);
 	setList(newArray);
 	
 });
 
 /* USETENSILS */
 ustensilesSelector.addEventListener('click', (e) => {
-	e.preventDefault();
-	checkUstensil = true;
-	console.log(newArray);
-	toggleList(menuUse);
-	setList(newArray);
+	checkUstensil = !checkUstensil;
+	if (checkUstensil) {
+		console.log(checkUstensil);
+		filterUsetensil.classList.remove('hidden');
+		filterUsetensil.classList.add('active');
+		setList(newArray);
+	} else {
+		filterUsetensil.classList.add('hidden');
+		filterUsetensil.innerHTML = ``;
+		console.log(checkUstensil);
+	}
 });
+function remplissage() {
+	console.log(newArray);
+}
 
 /* chevron => aficher pas remplir  */
 
@@ -74,7 +86,6 @@ function setList (testArray){
 		if (checkIngredient == true) {
 			recipe.ingredients.forEach((ingredient) => {
 				toto.push(ingredient)
-				console.log(ingredient);
 			})
 			checkIngredient = false;
 		} 
@@ -82,38 +93,22 @@ function setList (testArray){
 			recipe.ustensils.forEach((ustensil) =>{
 			usetensilList.push(ustensil);
 			})
-			checkUstensil = false
+			usetensilList = [...new Set(usetensilList)];
+			displayList(usetensilList, filterUsetensil);
 		}
 		if (checkApplicances = true){
-			// creer nouveau tableau 
 			filterAppareil.innerHTML =``
 			appList.push(recipe.appliance)
-			//filterAppareil.innerHTML += `<li> ${recipe.appliance} </li>`;
-
+			appList = [...new Set(appList)];
+			displayList(appList);
 		}
-		checkApplicances = false
 	});
-	appList = [...new Set(appList)];
-	appList.forEach((app) => {
-		filterAppareil.innerHTML += `<li class="filter__item"> ${app}</li>`;
-	});
-
-	usetensilList = [...new Set(usetensilList)];
-	usetensilList.forEach((use) => {
-		console.log(use);
-		filterUsetensil.innerHTML += `<li class="filter__item"> ${use}</li>`;
-	});
+	
 	 createTag();
 }
 
-function toggleList(filter){
-	filter.classList.toggle('visible')
-	if(checkApplicances == true){
-		filter.style.backgroundColor = '#68D9A4';
-	}
-	else if (checkUstensil == true){
-		filter.style.backgroundColor = '#ED6454';
-	}
-
-
+function displayList(array){
+	array.forEach((item) =>{
+		filterAppareil.innerHTML += `<li class="filter__item">${item}</li>`;
+	})
 }
