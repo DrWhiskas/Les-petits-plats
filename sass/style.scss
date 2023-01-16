@@ -31,11 +31,30 @@
 }
 
 .hidden{
-    display: hidden;
+    display: none;
 }
 .active{
-    display: block;
+    display: inline-flex;
+    width: 400px;
 }
 li{
     color: red;
+}
+
+.filter__box{
+    height: 100px;
+    width: 400px;
+    border-radius: 0px 5px;
+    color: white;
+    border: none;
+}
+.usetensils{
+    background-color: $usetensiles;
+}
+.appareils{
+    background-color: $appareils;
+}
+ul{
+    margin: 0;
+    padding: 18px;
 }

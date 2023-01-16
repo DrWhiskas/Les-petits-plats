@@ -48,7 +48,7 @@
 						placeholder="Ingredients"
 					/>
 					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
-					<div class="filter__box" id="filter__box__ingredients"></div>
+					<div class="filter__box hidden" id="filter__box__ingredients"></div>
 				</div>
 				<div class="filter__menu" id="filter__app">
 					<input
@@ -59,8 +59,8 @@
 						placeholder="Appareils"
 					/>
 					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
-					<div class="filter__box" >
-						<ul id="filter__box__appareils" class="hidden">
+					<div class="filter__box appareils hidden" id="filter__box__appareils">
+						<ul id="filter__box__appareils__list">
 							
 						</ul>
 				</div>
@@ -74,7 +74,11 @@
 						placeholder="Ustensiles"
 					/>
 					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
-					<div class="filter__box" id="filter__box__usetensils">
+					<div class="filter__box usetensils hidden" id="filter__box__usetensils">
+						<ul id="filter__box__usetensils__list">
+
+						</ul>
+						
 				</div>
 			</section>
 			<section id="recipes"></section>
