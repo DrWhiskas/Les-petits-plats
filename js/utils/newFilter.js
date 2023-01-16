@@ -30,7 +30,8 @@ usentensilsSelector.addEventListener('click', (e)=>{
 		);
     usentensilsSelector.classList.toggle('active')
     boxFilter.classList.toggle('hidden')
-    console.log('oui');
+    console.log(usetensilArray,'sfldsmfjsdlfkj');
+    displayList(usentensilList, usetensilArray);
     //displayList(usentensilList, usetensilArray);
 
 })
@@ -50,6 +51,7 @@ const appSelector = document.getElementById('appareils');
 
 function displayList(target, array) {
 	array.forEach((item) => {
+         array = [...new Set(array)];
 		target.innerHTML += `<li class="filter__item">${item}</li>`;
 	});
 }
