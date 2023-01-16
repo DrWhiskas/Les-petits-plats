@@ -3,7 +3,7 @@ let arrayIngredients = []
 let arrayAppliance = [];
 let arrayUstensils = [];
 
-let filterArray = []
+
 
 let checkIngredient = false
 let checkUstensil = false
