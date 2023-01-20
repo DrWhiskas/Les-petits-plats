@@ -1,6 +1,8 @@
 function setList(){
+    usetensilArray = []
     newArray.forEach((item) => {
         item.ustensils.forEach((use) =>{
+            console.log(use);
             usetensilArray.push(use)
         })
         appArray.push(item.appliance);

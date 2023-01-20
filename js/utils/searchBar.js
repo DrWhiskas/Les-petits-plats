@@ -35,7 +35,6 @@ function searchRecipe(keys) {
 					newArray.push(recipe);
 					usetensilArray.push(recipe.ustensils)
 					
-
 				}
 				
 				/* APPAREILS */
