@@ -51,8 +51,7 @@ const appSelector = document.getElementById('appareils');
     	appSelector.classList.toggle('active');
     	boxFilter.classList.toggle('hidden');
     	displayList(appList, appArray);
-        createTag()
-        appSearch()
+        createTag()        
     });
 
 /* INGREDIENTS */
@@ -76,9 +75,23 @@ function displayList(target, array) {
 	});
 }
 
+appSelector.addEventListener('keyup', (e) => {
+	const searchKey = e.target.value;
+    searchFilter(searchKey);
+	});
 
-function appSearch(){
-    let appItem =
-			document.querySelectorAll('.filter__item').nextElementSibling
-    console.log(appItem);
+
+
+
+function searchFilter(keys){
+        let appItem = document.querySelectorAll('.filter__item');
+		console.log(appItem);
+    if(keys.length != 0){
+        appItem.forEach((item) =>{
+        //if (item.includes(keys)) {
+           console.log(item);
+		//}
+        })
+    }
 }
+
