@@ -20,6 +20,7 @@ function searchRecipe(keys) {
 	recipesSection.innerHTML = '';
 	newArray = []
 	usetensilArray = []
+	ingredientArray = []
 	appArray =[]
 	testArray = []
 	if (keys.length > 2) {

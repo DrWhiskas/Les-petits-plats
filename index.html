@@ -48,7 +48,9 @@
 						placeholder="Ingredients"
 					/>
 					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
-					<div class="filter__box hidden" id="filter__box__ingredients"></div>
+					<div class="filter__box hidden" id="filter__box__ingredients">
+						<ul id="filter__box__ingredient__list"></ul>
+					</div>
 				</div>
 				<div class="filter__menu" id="filter__app">
 					<input
@@ -60,10 +62,8 @@
 					/>
 					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
 					<div class="filter__box appareils hidden" id="filter__box__appareils">
-						<ul id="filter__box__appareils__list">
-							
-						</ul>
-				</div>
+						<ul id="filter__box__appareils__list"></ul>
+					</div>
 				</div>
 				<div class="filter__menu" id="filter__usetensils">
 					<input
@@ -75,10 +75,8 @@
 					/>
 					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
 					<div class="filter__box usetensils hidden" id="filter__box__usetensils">
-						<ul id="filter__box__usetensils__list">
-
-						</ul>
-						
+						<ul id="filter__box__usetensils__list"></ul>	
+					</div>
 				</div>
 			</section>
 			<section id="recipes"></section>
@@ -87,7 +85,7 @@
 	<script src="./js/data/recipes.js"></script>
 	<script src="/js/utils/recipes_card.js"></script>
 	<script src="./js/utils/searchBar.js"></script>
-	<script src="./js/utils/newFilter.js"></script>
-	<!--<script src="./js/utils/filter.js"></script>-->
 	<script src="./js/utils/tag.js"></script>
+	<script src="./js/utils/newFilter.js"></script>
+	
 </html>

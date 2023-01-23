@@ -38,11 +38,12 @@
     width: 400px;
 }
 li{
-    color: red;
+    color: white;
 }
 
 .filter__box{
-    height: 100px;
+    height: auto;
+    position: absolute;
     width: 400px;
     border-radius: 0px 5px;
     color: white;
