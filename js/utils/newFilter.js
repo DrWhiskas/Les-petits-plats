@@ -69,6 +69,7 @@ ingredientSelector.addEventListener('click', (e) => {
 });
 
 function displayList(target, array) {
+    target.innerHTML=''
 	array.forEach((item) => {
 		array = [...new Set(array)];
 		target.innerHTML += `<li class="filter__item">${item}</li>`;
@@ -84,12 +85,16 @@ appSelector.addEventListener('keyup', (e) => {
 
 
 function searchFilter(keys){
-        let appItem = document.querySelectorAll('.filter__item');
-		console.log(appItem);
+        let appItem = document.querySelectorAll('.filter__item')
     if(keys.length != 0){
         appItem.forEach((item) =>{
-        //if (item.includes(keys)) {
-           console.log(item);
+			let oui = item.innerText
+			if (oui.toLowerCase().includes(keys)) {
+				console.log("oui");
+			}
+			else{
+				
+			}
 		//}
         })
     }
