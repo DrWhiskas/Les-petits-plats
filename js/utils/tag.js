@@ -31,3 +31,9 @@ function removeTag(event){
     let tag = event.target
     tag.parentNode.removeChild(tag);
 }
+
+
+
+
+
+/* => FACTORISER */

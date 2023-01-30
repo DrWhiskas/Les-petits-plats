@@ -76,8 +76,10 @@ function displayList(target, array) {
 }
 
 appSelector.addEventListener('keyup', (e) => {
+	 /* creer attribut html*/ 
 	const searchKey = e.target.value;
     searchFilter(searchKey);
+
 	});
 
 usentensilsSelector.addEventListener('keyup', (e) => {
