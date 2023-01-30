@@ -66,7 +66,6 @@ ustensilesSelector.addEventListener('click', (e) => {
 		filterUsetensil.innerHTML = ``;
 	}
 });
-/* chevron => aficher pas remplir  */
 
 /* GET DATA */
 

@@ -12,10 +12,7 @@ searchSelection.addEventListener('keyup', (e) => {
 	searchRecipe(searchKey);
 	
 });
-
-
 /* TRAITEMENT DE LA BARRE DE RECHERCHE */
-
 function searchRecipe(keys) {
 	recipesSection.innerHTML = '';
 	newArray = []
@@ -35,9 +32,7 @@ function searchRecipe(keys) {
 				if (ustensil.toLowerCase().includes(keys)) {
 					newArray.push(recipe);
 					usetensilArray.push(recipe.ustensils)
-					
 				}
-				
 				/* APPAREILS */
 				if (recipe.appliance.toLowerCase().includes(keys)) {
 					newArray.push(recipe);
@@ -50,7 +45,6 @@ function searchRecipe(keys) {
 					//toto();
 				}
 			})
-		
 		})
 		setList();
 		newArray = [...new Set(newArray)];
