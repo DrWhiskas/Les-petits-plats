@@ -37,14 +37,12 @@ const menung = document.getElementById('filter__ing');
 appareilsSelector.addEventListener('click', (e) => {
 	checkApplicances = !checkApplicances
 	if(checkApplicances){
-		console.log(checkApplicances);
 		filterAppareil.classList.remove('hidden')
 		filterAppareil.classList.add('active');
 	}
 	else{
 		filterAppareil.classList.add('hidden');
 		filterAppareil.innerHTML=``
-		console.log(checkApplicances);
 	}
 	
 });
@@ -60,20 +58,14 @@ ingredientSelector.addEventListener('click', (e) => {
 ustensilesSelector.addEventListener('click', (e) => {
 	checkUstensil = !checkUstensil;
 	if (checkUstensil) {
-		console.log(checkUstensil);
 		filterUsetensil.classList.remove('hidden');
 		filterUsetensil.classList.add('active');
 		setList(newArray);
 	} else {
 		filterUsetensil.classList.add('hidden');
 		filterUsetensil.innerHTML = ``;
-		console.log(checkUstensil);
 	}
 });
-function remplissage() {
-	console.log(newArray);
-}
-
 /* chevron => aficher pas remplir  */
 
 /* GET DATA */

@@ -59,9 +59,3 @@ function searchRecipe(keys) {
 		recipesDisplay(recipes);
 	}
 }
-
-function oui(tableau){
-	tableau.forEach((sadge) =>{
-		console.log(sadge);
-	});
-}
