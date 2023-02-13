@@ -25,7 +25,6 @@ function searchRecipe(keys) {
 			/* RECIPES TITLES */
 			if (recipe.name.toLowerCase().includes(keys)) {
 				newArray.push(recipe);
-				//toto();
 			}
 			/* USTENSILS */
 			recipe.ustensils.forEach((ustensil) => {
@@ -42,7 +41,6 @@ function searchRecipe(keys) {
 			recipe.ingredients.forEach((newingredient)=>{
 				if(newingredient.ingredient.toLowerCase().includes(keys)){
 					newArray.push(recipe);
-					//toto();
 				}
 			})
 		})
@@ -52,4 +50,8 @@ function searchRecipe(keys) {
 	} else {
 		recipesDisplay(recipes);
 	}
+}
+
+function resetRecipes(){
+	recipesSection.innerHTML = ``
 }

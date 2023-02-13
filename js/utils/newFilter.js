@@ -121,6 +121,8 @@ function searchFilter(keys,attribute) {
 				}
 			});
 		} else {
-			appItem.style.display = 'block';
+			appItem.forEach((item) =>{
+				item.style.display = 'block';
+			})
 		}
 }
