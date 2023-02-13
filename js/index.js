@@ -1,1 +1,1 @@
-setList(newArray);
+setList(recipes);

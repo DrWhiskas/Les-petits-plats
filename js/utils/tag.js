@@ -67,33 +67,7 @@ function filterTag(tags, listTag) {
 			}
 		});
 	});
-	newArray = [];
-	newTag.forEach((tag) => {
-		newArray.push(tag);
-		removeTwins(newArray);
-	});
 	resetRecipes();
-	newArray.forEach((recipe) => {
-		listTag.forEach((tag) => {
-			let listTagText = tag.textContent;
-            console.log(recipe.appliance);
-            let oui = recipe.appliance.forEach
-			if (!listTagText.includes(recipe.appliance)) {
-				recipe.ustensils.forEach((usentesil) =>{
-                    if(!listTagText.includes(usentesil)){
-                        recipe.ingredients.forEach((ingredient) =>{
-                            if(!listTagText.includes(ingredient)){
-                                tag.style.display = 'none';
-                            }
-                        })
-                    }
-                })
-			}
-            else{
-                console.log('oui');
-            }
-		});
-	});
 	recipesDisplay(newArray);
 }
 

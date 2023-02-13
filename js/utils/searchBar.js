@@ -44,7 +44,7 @@ function searchRecipe(keys) {
 				}
 			})
 		})
-		setList();
+		setList(newArray);
 		newArray = [...new Set(newArray)];
 		recipesDisplay(newArray);
 	} else {

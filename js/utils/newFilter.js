@@ -2,7 +2,7 @@ let checkIngredient = false;
 let checkUstensil = false;
 let checkApplicances = false;
 
-function setList() {
+function setList(listArray) {
 	usetensilArray = [];
 	appArray = [];
 	ingredientArray = [];
@@ -13,15 +13,15 @@ function setList() {
 	const ingredientList = document.getElementById('filter__box__ingredient__list');
 	
 	/* REMPLISSAGE DES TABLEAUX */
-	newArray.forEach((item) => {
+	listArray.forEach((item) => {
 		item.ustensils.forEach((use) => {
 			usetensilArray.push(use);
-		})
+		});
 		appArray.push(item.appliance);
 		item.ingredients.forEach((element) => {
 			ingredientArray.push(element.ingredient);
-		})
-	})
+		});
+	});
 
 	/* SUPPRIMER LES DOUBLONS */ 
 	usetensilArray = [...new Set(usetensilArray)];
@@ -34,7 +34,7 @@ function setList() {
 	displayList(ingredientList, ingredientArray);
 	createTag();
 }
-setList();
+setList(newArray);
 
 /* SELECTOR */
 const usentensilsSelector = document.getElementById('ustensiles');
