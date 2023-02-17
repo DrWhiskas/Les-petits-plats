@@ -68,6 +68,7 @@ function filterTag(tags, listTag) {
 		});
 	});
 	resetRecipes();
+    setList(newTag);
 	recipesDisplay(newArray);
 }
 

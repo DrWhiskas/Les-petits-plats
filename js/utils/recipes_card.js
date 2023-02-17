@@ -1,9 +1,12 @@
+/* CREATION DES CARDS DES RECETTES */
+
+/* HEADER */
 function createCardHeader() {
 	const recipesHeader = document.createElement('header');
 	recipesHeader.classList = 'recipes__card__header';
 	return recipesHeader;
 }
-
+/* NAME */
 function createCardName(recipe) {
 	const recipesName = document.createElement('div');
 	recipesName.classList = 'recipes__card__dish-name';
