@@ -36,11 +36,6 @@
   width: 85%;
 }
 
-#ingredients :-ms-input-placeholder {
-  color: white;
-  width: 85%;
-}
-
 #ingredients ::placeholder {
   color: white;
   width: 85%;

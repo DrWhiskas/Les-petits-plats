@@ -130,3 +130,4 @@ function searchFilter(keys,attribute) {
 function removeTwins(array) {
 	array = [...new Set(array)];
 }
+

@@ -35,7 +35,7 @@
 }
 .active{
     display: inline-flex;
-    width: 400px;
+    width: 396px;
 }
 li{
     color: white;
@@ -48,6 +48,8 @@ li{
     border-radius: 0px 5px;
     color: white;
     border: none;
+    margin-top: -10px;
+    //z-index: -1;
 }
 .usetensils{
     background-color: $usetensiles;
