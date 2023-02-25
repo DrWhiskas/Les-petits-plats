@@ -38,19 +38,20 @@ function createTag(){
         // filtre du tag
         filterTag(tagArray);
         e.target.style.display = 'none';
-        console.log(usentensilList);
 
         
 
         tagSelector.appendChild(tag)  
         /* CLIQUE POUR SUPPRIMER UN TAG ET LE REMETTRE DANS LA LISTE */
         tag.addEventListener('click', (e) => {
-					removeTag(tag, tagArray, newArray);
+					//removeTag(tag);
 		    });
 
             tagItems = document.querySelectorAll('.filter__item');
 						tagItems.forEach((newItem) => {
-							if (newItem.innerText == e.target.innerText) {
+                            let a = newItem.innerText;
+                            let b = e.target.innerText;
+							if (a == b) {
 								newItem.style.display = 'none';
 							}
 						});
@@ -61,20 +62,11 @@ function createTag(){
 
 }
 /* RETIRER UN TAG */
-function removeTag(tag, liste, toto) {
-	tag.remove()
 
-    filterTag(liste);
-    resetRecipes(); 
-    recipesDisplay(newArray)
-    setList(toto)
-
-}
 /* FILTRE LES TAG */
 function filterTag(tags) {
 	let newTag = [];
     let tagSelected = []
-    console.log(tags);
         newArray.forEach((recipe) => {
             let checkRecipe = true 
 					tags.forEach((tag) => {
@@ -83,14 +75,12 @@ function filterTag(tags) {
 							let tagSplit = tag.split('_')[1];
 							if (tagSplit.includes(recipe.appliance)) {
 								checkTag = true
-								//tagSelected.push({ tagSplit, type: 'appareil' });
 							}
 						} else if (tag.includes('usentensil_')) {
 							let tagSplit = tag.split('_')[1];
 							recipe.ustensils.forEach((usentesil) => {
 								if (tagSplit.includes(usentesil)) {
 									checkTag = true;
-									//tagSelected.push({ tagSplit, type: 'usetensil' });
 								}
 							});
 						} else {
@@ -98,13 +88,9 @@ function filterTag(tags) {
 							recipe.ingredients.forEach((ingredient) => {
 								if (tagSplit.includes(ingredient.ingredient)) {
 									checkTag = true;
-									//tagSelected.push({ tagSplit, type: 'ingredient' });
 								}
 							});
 						}
-                        console.log(recipe);
-                        console.log(tag);
-                        console.log(checkTag);
                         if(checkTag == false){
                         checkRecipe = false
                     }
@@ -112,9 +98,7 @@ function filterTag(tags) {
                     if(checkRecipe == true){
                     newTag.push(recipe)
                 }
-				});
-                
-                
+				});  
     resetRecipes(); 
 	recipesDisplay(newTag);
     setList(newTag);

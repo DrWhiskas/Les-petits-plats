@@ -22,7 +22,6 @@ function setList(listArray) {
 			ingredientArray.push(element.ingredient);
 		});
 	});
-
 	/* SUPPRIMER LES DOUBLONS */ 
 	usetensilArray = [...new Set(usetensilArray)];
 	appArray = [...new Set(appArray)];
