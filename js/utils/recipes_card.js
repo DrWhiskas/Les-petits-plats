@@ -16,7 +16,18 @@ function createCardName(recipe) {
   `;
 	return recipesName;
 }
+function createCardMain(recipe){
+	const recipeMain = document.createElement('div')
+	recipeMain.classList.add('recipe__card__main')
 
+	const recipeIngredients = createCardIngredients(recipe);
+	recipeMain.appendChild(recipeIngredients);
+
+  	const recipeSteps = createCardSteps(recipe);
+	recipeMain.appendChild(recipeSteps);
+
+	return recipeMain
+}
 function createCardIngredients(recipe) {
 	const recipesIngredient = document.createElement('div');
 	recipesIngredient.classList = 'recipes__ingredient';
@@ -25,7 +36,7 @@ function createCardIngredients(recipe) {
 		newIngredient.classList = 'recipes__card__list';
 		newIngredient.innerHTML = `
       <span class="recipes__card__list__ingredients">
-        ${ingredient.ingredient} ${ingredient.quantity} ${ingredient.unit}
+        <strong>${ingredient.ingredient}</strong> : ${ingredient.quantity} ${ingredient.unit}
       </span>
     `;
 		recipesIngredient.appendChild(newIngredient);
@@ -36,7 +47,7 @@ function createCardIngredients(recipe) {
 function createCardSteps(recipe) {
 	const recipeStep = document.createElement('div');
 	recipeStep.classList = 'recipes__card__list__description';
-	recipeStep.innerHTML = `${recipe.description}`;
+	recipeStep.innerHTML = `<p class="recipes__card__list__description__text">${recipe.description}</p>`;
 	return recipeStep;
 }
 
@@ -45,8 +56,9 @@ function createCard(recipe) {
 	recipesCard.classList = 'recipes__card';
 	recipesCard.appendChild(createCardHeader());
 	recipesCard.appendChild(createCardName(recipe));
-	recipesCard.appendChild(createCardIngredients(recipe));
-	recipesCard.appendChild(createCardSteps(recipe));
+	//recipesCard.appendChild(createCardIngredients(recipe));
+	//recipesCard.appendChild(createCardSteps(recipe));
+	recipesCard.appendChild(createCardMain(recipe))
 	return recipesCard;
 }
 
@@ -56,3 +68,4 @@ function recipesDisplay(recipesArray) {
 		recipesSection.appendChild(createCard(recipe));
 	});
 }
+//recipesDisplay(recipes);

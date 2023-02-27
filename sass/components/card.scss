@@ -5,9 +5,10 @@
     margin: 5%;
     & .recipes__card{
         width: 30%;
-        height: auto;
+        height: 400px;
         margin-top: 3%;
         background-color: $cardBot;
+        border-radius: 5px;
         &__header{
             width: 100%;
             height: 170px;
@@ -17,6 +18,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding: 0 4%;
         }
         &__dish__title{
             font-size: 18px;
@@ -26,9 +28,16 @@
         }
         &__list__description{
              color: black;
+             display: -webkit-box;
+             -webkit-line-clamp: 5;
+             -webkit-box-orient: vertical;
+             overflow: hidden;
+             width: 50%;
+             height: 100%;
         }
         &__list{
             color: black;
+            margin: 0;
         }
     }
 }

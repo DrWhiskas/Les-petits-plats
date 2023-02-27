@@ -40,9 +40,10 @@ body {
 }
 #recipes .recipes__card {
   width: 30%;
-  height: auto;
+  height: 400px;
   margin-top: 3%;
   background-color: #E7E7E7;
+  border-radius: 5px;
 }
 #recipes .recipes__card__header {
   width: 100%;
@@ -53,6 +54,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 4%;
 }
 #recipes .recipes__card__dish__title {
   font-size: 18px;
@@ -62,9 +64,16 @@ body {
 }
 #recipes .recipes__card__list__description {
   color: black;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
 }
 #recipes .recipes__card__list {
   color: black;
+  margin: 0;
 }
 
 /* FILTERS */
@@ -215,7 +224,7 @@ a {
 
 .active {
   display: inline-flex;
-  width: 396px;
+  width: 496px;
 }
 
 li {
@@ -225,7 +234,7 @@ li {
 .filter__box {
   height: auto;
   position: absolute;
-  width: 400px;
+  width: 500px;
   border-radius: 0px 5px;
   color: white;
   border: none;
@@ -247,4 +256,22 @@ li {
 ul {
   margin: 0;
   padding: 18px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter__item {
+  flex: 1 0 calc((100% - 20px) / 4);
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.recipe__card__main {
+  display: flex;
+  padding: 0 4%;
+}
+
+.recipes__card__list__description__text {
+  width: 100%;
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
