@@ -47,6 +47,7 @@ function searchRecipe(keys) {
 		setList(newArray);
 		newArray = [...new Set(newArray)];
 		recipesDisplay(newArray);
+		console.log(newArray);
 	} else {
 		recipesDisplay(recipes);
 	}

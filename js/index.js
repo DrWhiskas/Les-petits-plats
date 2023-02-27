@@ -1,1 +1,2 @@
+recipesDisplay(recipes);
 setList(recipes);

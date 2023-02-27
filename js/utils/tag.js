@@ -2,13 +2,7 @@
 let tagArray = [];
 function createTag(){
     const tagSelector = document.getElementById('tag');
-    let tagItems = document.querySelectorAll('.filter__item')
-
-    const usentensilList = document.getElementById('filter__box__usetensils__list');	
-	const appList = document.getElementById('filter__box__appareils__list');
-	const ingredientList = document.getElementById('filter__box__ingredient__list');
-
-    
+    let tagItems = document.querySelectorAll('.filter__item')    
     tagItems.forEach((item) => {
     item.addEventListener('click', (e) => {
        let text = e.target.textContent;
@@ -37,28 +31,46 @@ function createTag(){
     
         // filtre du tag
         filterTag(tagArray);
-        e.target.style.display = 'none';
-
-        
 
         tagSelector.appendChild(tag)  
         /* CLIQUE POUR SUPPRIMER UN TAG ET LE REMETTRE DANS LA LISTE */
-        tag.addEventListener('click', (e) => {
-					//removeTag(tag);
-		    });
-
-            tagItems = document.querySelectorAll('.filter__item');
-						tagItems.forEach((newItem) => {
-                            let a = newItem.innerText;
-                            let b = e.target.innerText;
-							if (a == b) {
-								newItem.style.display = 'none';
-							}
-						});
+        tagItems = document.querySelectorAll('.filter__item');
+		tagItems.forEach((newItem) => {
+		    if (newItem.innerText == e.target.innerText) {
+			    newItem.style.display = 'none';
+		    }
+	    });
+        /* SUPPRIMER UN ELEMENT DE LA LISTE DES TAG */
+        tag.addEventListener('click', (e) =>{
+            /* effacer l'element html*/
+           tag.remove()
+           tagArray.forEach((tagActivated, index) =>{
+            if(tagActivated.includes('appareil_')){
+                let tagSplit = tagActivated.split('_')[1];
+                if(tag.innerText.includes(tagSplit)){
+                    tagArray.splice(index, 1)
+                }
+            }
+            else if(tagActivated.includes('usentensil_')){
+                let tagSplit = tagActivated.split('_')[1];
+                if(tag.innerText.includes(tagSplit)){
+                    tagArray.splice(index, 1)
+                }
+            }
+            else{
+                let tagSplit = tagActivated.split('_')[1];
+                if(tag.innerText.includes(tagSplit)){
+                    tagArray.splice(index, 1)
+                }
+            }
+           })
+           filterTag(tagArray)
         })
-        /* REMETTRE A ZERO SI LA LISTE DE TAG EST VIDE */
-        
-    })
+                                            
+    })   
+})
+
+    
 
 }
 /* RETIRER UN TAG */
@@ -98,7 +110,7 @@ function filterTag(tags) {
                     if(checkRecipe == true){
                     newTag.push(recipe)
                 }
-				});  
+				});
     resetRecipes(); 
 	recipesDisplay(newTag);
     setList(newTag);

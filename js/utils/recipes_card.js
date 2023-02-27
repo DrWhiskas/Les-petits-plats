@@ -56,4 +56,3 @@ function recipesDisplay(recipesArray) {
 		recipesSection.appendChild(createCard(recipe));
 	});
 }
-recipesDisplay(recipes);
