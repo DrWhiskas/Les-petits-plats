@@ -78,6 +78,7 @@ function createTag(){
 /* FILTRE LES TAG */
 function filterTag(tags) {
 	let newTag = [];
+    console.log(tags);
     let tagSelected = []
         newArray.forEach((recipe) => {
             let checkRecipe = true 
@@ -85,20 +86,20 @@ function filterTag(tags) {
                         let checkTag = false
 						if (tag.includes('appareil_')) {
 							let tagSplit = tag.split('_')[1];
-							if (tagSplit.includes(recipe.appliance)) {
-								checkTag = true
+							if (recipe.appliance.includes(tagSplit)) {
+								checkTag = true;
 							}
 						} else if (tag.includes('usentensil_')) {
 							let tagSplit = tag.split('_')[1];
-							recipe.ustensils.forEach((usentesil) => {
-								if (tagSplit.includes(usentesil)) {
+							recipe.ustensils.forEach((ustensil) => {
+								if (ustensil.includes(tagSplit)) {
 									checkTag = true;
 								}
 							});
 						} else {
 							let tagSplit = tag.split('_')[1];
 							recipe.ingredients.forEach((ingredient) => {
-								if (tagSplit.includes(ingredient.ingredient)) {
+								if (ingredient.ingredient.includes(tagSplit)) {
 									checkTag = true;
 								}
 							});

@@ -1,4 +1,4 @@
-let newArray = [];
+let newArray = recipes;
 let usetensilArray = []
 let ingredientArray = [];
 let appArray = []
@@ -10,7 +10,6 @@ const recipesSection = document.getElementById('recipes');
 searchSelection.addEventListener('keyup', (e) => {
 	const searchKey = e.target.value;
 	searchRecipe(searchKey);
-	
 });
 /* TRAITEMENT DE LA BARRE DE RECHERCHE */
 function searchRecipe(keys) {

@@ -67,5 +67,6 @@ function recipesDisplay(recipesArray) {
 	recipesArray.forEach((recipe) => {
 		recipesSection.appendChild(createCard(recipe));
 	});
+	console.log(recipesArray);
 }
 //recipesDisplay(recipes);
