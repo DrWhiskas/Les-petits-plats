@@ -79,7 +79,6 @@ function createTag(){
 function filterTag(tags) {
 	let newTag = [];
     console.log(tags);
-    let tagSelected = []
         newArray.forEach((recipe) => {
             let checkRecipe = true 
 					tags.forEach((tag) => {
