@@ -18,6 +18,7 @@
     background-color: red;
     margin-top: 15px;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .filter__menu{
@@ -70,6 +71,7 @@ ul{
      flex: 1 0 calc((100% - 20px) / 4);
   margin-right: 20px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .recipe__card__main{
     display: flex;
