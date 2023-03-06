@@ -62,24 +62,3 @@ function searchRecipe(keys) {
 function resetRecipes(){
 	recipesSection.innerHTML = ``
 }
-/*
-	recipes.forEach((recipe) => {
-		if (recipe.name.toLowerCase().includes(keys)) {
-			newArray.push(recipe);
-		}
-		recipe.ustensils.forEach((ustensil) => {
-			if (ustensil.toLowerCase().includes(keys)) {
-				newArray.push(recipe);
-				usetensilArray.push(recipe.ustensils);
-			}
-			if (recipe.appliance.toLowerCase().includes(keys)) {
-				newArray.push(recipe);
-			}
-		});
-		recipe.ingredients.forEach((newingredient) => {
-			if (newingredient.ingredient.toLowerCase().includes(keys)) {
-				newArray.push(recipe);
-			}
-		});
-	});
-	*/
