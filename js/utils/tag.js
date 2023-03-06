@@ -64,6 +64,7 @@ function createTag(){
                 }
             }
            })
+           
            filterTag(tagArray)
         })
                                             
@@ -112,6 +113,7 @@ function filterTag(tags) {
                     newTag.push(recipe)
                 }
 				});
+               
     resetRecipes(); 
 	recipesDisplay(newTag);
     setList(newTag);
