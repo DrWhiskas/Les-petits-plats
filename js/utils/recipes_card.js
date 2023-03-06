@@ -69,4 +69,3 @@ function recipesDisplay(recipesArray) {
 	});
 	console.log(recipesArray);
 }
-recipesDisplay(recipes);
