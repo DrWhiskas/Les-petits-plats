@@ -39,6 +39,7 @@ function createTag(){
 		    if (newItem.innerText == e.target.innerText) {
 			    newItem.style.display = 'none';
 		    }
+            console.log(tagArray, 'oui');
 	    });
         /* SUPPRIMER UN ELEMENT DE LA LISTE DES TAG */
         tag.addEventListener('click', (e) =>{
