@@ -36,8 +36,9 @@ function createCardIngredients(recipe) {
 		newIngredient.classList = 'recipes__card__list';
 		console.log(ingredient.quantity);
 		console.log(ingredient.quantity);
-		if(ingredient.unit){
-			newIngredient.innerHTML = `
+		if (ingredient.quantity) {
+			
+				newIngredient.innerHTML = `
       			<span class="recipes__card__list__ingredients">
         		<strong>${ingredient.ingredient}</strong> : ${ingredient.quantity} ${ingredient.unit}
       			</span>
@@ -45,7 +46,7 @@ function createCardIngredients(recipe) {
 		}else{
 			newIngredient.innerHTML = `
       			<span class="recipes__card__list__ingredients">
-        		<strong>${ingredient.ingredient}</strong> : ${ingredient.quantity} 
+        		<strong>${ingredient.ingredient}</strong>
       			</span>
     `;
 		}
