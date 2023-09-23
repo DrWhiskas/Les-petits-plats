@@ -34,11 +34,22 @@ function createCardIngredients(recipe) {
 	recipe.ingredients.forEach((ingredient) => {
 		const newIngredient = document.createElement('p');
 		newIngredient.classList = 'recipes__card__list';
-		newIngredient.innerHTML = `
-      <span class="recipes__card__list__ingredients">
-        <strong>${ingredient.ingredient}</strong> : ${ingredient.quantity} ${ingredient.unit}
-      </span>
+		console.log(ingredient.quantity);
+		console.log(ingredient.quantity);
+		if(ingredient.unit){
+			newIngredient.innerHTML = `
+      			<span class="recipes__card__list__ingredients">
+        		<strong>${ingredient.ingredient}</strong> : ${ingredient.quantity} ${ingredient.unit}
+      			</span>
     `;
+		}else{
+			newIngredient.innerHTML = `
+      			<span class="recipes__card__list__ingredients">
+        		<strong>${ingredient.ingredient}</strong> : ${ingredient.quantity} 
+      			</span>
+    `;
+		}
+			
 		recipesIngredient.appendChild(newIngredient);
 	});
 	return recipesIngredient;
@@ -56,8 +67,6 @@ function createCard(recipe) {
 	recipesCard.classList = 'recipes__card';
 	recipesCard.appendChild(createCardHeader());
 	recipesCard.appendChild(createCardName(recipe));
-	//recipesCard.appendChild(createCardIngredients(recipe));
-	//recipesCard.appendChild(createCardSteps(recipe));
 	recipesCard.appendChild(createCardMain(recipe))
 	return recipesCard;
 }
@@ -69,4 +78,3 @@ function recipesDisplay(recipesArray) {
 	});
 	console.log(recipesArray);
 }
-//recipesDisplay(recipes);
