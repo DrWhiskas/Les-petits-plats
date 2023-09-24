@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 5%;
+    margin: 3%;
     & .recipes__card{
         width: 30%;
         height: 400px;
@@ -39,5 +39,27 @@
             color: black;
             margin: 0;
         }
+    }
+}
+
+@media screen and (max-width: 992px){
+    #recipes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & .recipes__card{
+        width: 38%;
+    }
+    }
+}
+@media screen and (max-width: 680px){
+    #recipes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+     & .recipes__card{
+        width: 60%;
+    }
     }
 }

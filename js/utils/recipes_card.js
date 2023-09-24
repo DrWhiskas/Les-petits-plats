@@ -38,9 +38,12 @@ function createCardIngredients(recipe) {
 		console.log(ingredient.quantity);
 		if (ingredient.quantity) {
 				if(ingredient.unit){
+					if(ingredient.unit ==='grammes'){
+						ingredient.unit = 'g';
+					}
 				newIngredient.innerHTML = `
       				<span class="recipes__card__list__ingredients">
-        			<strong>${ingredient.ingredient}</strong> : ${ingredient.quantity} ${ingredient.unit}
+        			<strong>${ingredient.ingredient}</strong> : ${ingredient.quantity}${ingredient.unit}
       				</span>
     			`;
 				}else{

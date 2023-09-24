@@ -3,7 +3,6 @@
     display: flex;
     flex-wrap: wrap;
     //width: 100%;
-    margin-left: 6%;
     margin-top: 2%;
     &__items{
         display: flex;
@@ -13,6 +12,7 @@
             height: 69px;
             border-radius: 5px;
             color: white;
+            outline: none;
             border: none;
             &:hover{
                 cursor: pointer;
@@ -54,29 +54,13 @@ a{
     display: none;
 }
 
-/* TESTS */ 
-
-#gazo{
-    height: 397px;
-    width: 667px;
-    background: $usetensiles;
-    border-radius: 5px;
-    overflow: hidden;
-}
-#sadge{
-    width: 100%;
-    background: $usetensiles;
-    color: white;
-    border: none;
-    height: 10%;
-}
-.list{
-    height: auto;
-    color: blue;
-}
-
-
-
-.visible{
-    height: auto;
+@media screen and (max-width: 992px){
+    #recipes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & .recipes__card{
+        width: 38%;
+    }
+    }
 }

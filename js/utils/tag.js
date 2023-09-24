@@ -9,7 +9,7 @@ function createTag(){
        let tag = document.createElement('span')
        let type
         tag.classList.add('tag');
-        if(checkUstensil == true){
+        if(checkUstensil === true){
             type = 'usentensil_'
             tag.style.backgroundColor = '#ED6454';
         }

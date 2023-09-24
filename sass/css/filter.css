@@ -4,7 +4,6 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 6%;
   margin-top: 2%;
 }
 .filter__items {
@@ -16,6 +15,7 @@
   height: 69px;
   border-radius: 5px;
   color: white;
+  outline: none;
   border: none;
 }
 .filter__items__input:hover {
@@ -66,28 +66,13 @@ a {
   display: none;
 }
 
-/* TESTS */
-#gazo {
-  height: 397px;
-  width: 667px;
-  background: #ED6454;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-#sadge {
-  width: 100%;
-  background: #ED6454;
-  color: white;
-  border: none;
-  height: 10%;
-}
-
-.list {
-  height: auto;
-  color: blue;
-}
-
-.visible {
-  height: auto;
+@media screen and (max-width: 992px) {
+  #recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #recipes .recipes__card {
+    width: 38%;
+  }
 }/*# sourceMappingURL=filter.css.map */

@@ -40,30 +40,45 @@ const usentensilsSelector = document.getElementById('ustensiles');
 const appSelector = document.getElementById('appareils');
 const ingredientSelector = document.getElementById('ingredients');
 
+const boxIngreFilter = document.getElementById('filter__box__ingredients');
+const boxAppFilter = document.getElementById('filter__box__appareils');
+const boxUseFilter = document.getElementById('filter__box__usetensils');
 
-/* USETENSILES */
-usentensilsSelector.addEventListener('click', (e) => {
-	checkUstensil = !checkUstensil; 
-	const boxFilter = document.getElementById('filter__box__usetensils');
-	usentensilsSelector.classList.toggle('active');
-	boxFilter.classList.toggle('hidden');
+function toggleFalse(element1, element2) {
+	return [false, false]
+}
+function closeBox(box1, box2,selector1, selector2) { // permet de fermer un autre menu si il est ouvert
+	selector1.classList.remove('active');
+	selector2.classList.remove('active');
+	box1.classList.add('hidden');
+	box2.classList.add('hidden');
+}
+/* INGREDIENTS */
+ingredientSelector.addEventListener('click', (e) => {
+	[checkApplicances, checkUstensil] = toggleFalse(checkApplicances, checkUstensil);
+	closeBox(boxAppFilter, boxUseFilter, appSelector, usentensilsSelector)
+    checkIngredient = !checkIngredient;
+	ingredientSelector.classList.toggle('active');
+	boxIngreFilter.classList.toggle('hidden');	
 });
 
 /* APPARREILS */
 	appSelector.addEventListener('click', (e) => {
+		[checkApplicances, checkIngredient] = toggleFalse(checkApplicances, checkIngredient);
+		closeBox(boxIngreFilter, boxUseFilter, ingredientSelector, usentensilsSelector);
 		checkApplicances = !checkApplicances;
-		const boxFilter = document.getElementById('filter__box__appareils');
 		appSelector.classList.toggle('active');
-		boxFilter.classList.toggle('hidden'); 
+		boxAppFilter.classList.toggle('hidden'); 
 	});
 		
-/* INGREDIENTS */
-ingredientSelector.addEventListener('click', (e) => {
-    checkIngredient = !checkIngredient;
-	const boxFilter = document.getElementById('filter__box__ingredients');
-	ingredientSelector.classList.toggle('active');
-	boxFilter.classList.toggle('hidden');
-	
+/* USETENSILES */
+usentensilsSelector.addEventListener('click', (e) => {
+	[checkApplicances, checkIngredient] = toggleFalse(checkApplicances, checkIngredient);
+	closeBox(boxIngreFilter, boxAppFilter, ingredientSelector, appSelector);
+	checkUstensil = !checkUstensil;
+	console.log(checkApplicances);
+	usentensilsSelector.classList.toggle('active');
+	boxUseFilter.classList.toggle('hidden');
 });
 
 /* AFFICHAGE DES LISTES */
@@ -78,21 +93,21 @@ function displayList(target, array) {
 appSelector.addEventListener('keyup', (e) => {
 	const searchKey = e.target.value;
 	const input = e.target;
-	const attribute = input.getAttribute('listType');
+	const attribute = input.getAttribute('data-listType');
 	searchFilter(searchKey, attribute);
 });
 
 usentensilsSelector.addEventListener('keyup', (e) => {
 	const searchKey = e.target.value;
 	const input = e.target;
-	const attribute = input.getAttribute('listType');
+	const attribute = input.getAttribute('data-listType');
 	searchFilter(searchKey, attribute);
 });
 
 ingredientSelector.addEventListener('keyup', (e) => {
 	const searchKey = e.target.value;
 	const input = e.target;
-	const attribute = input.getAttribute('listType');
+	const attribute = input.getAttribute('data-listType');
 	searchFilter(searchKey, attribute);
 })
 
@@ -130,3 +145,29 @@ function removeTwins(array) {
 	array = [...new Set(array)];
 }
 
+
+
+
+/*
+usentensilsSelector.addEventListener('click', (e) => {
+	checkUstensil = !checkUstensil; 
+	const boxFilter = document.getElementById('filter__box__usetensils');
+	usentensilsSelector.classList.toggle('active');
+	boxFilter.classList.toggle('hidden');
+});
+
+	appSelector.addEventListener('click', (e) => {
+		checkApplicances = !checkApplicances;
+		const boxFilter = document.getElementById('filter__box__appareils');
+		appSelector.classList.toggle('active');
+		boxFilter.classList.toggle('hidden'); 
+	});
+		
+ingredientSelector.addEventListener('click', (e) => {
+    checkIngredient = !checkIngredient;
+	const boxFilter = document.getElementById('filter__box__ingredients');
+	ingredientSelector.classList.toggle('active');
+	boxFilter.classList.toggle('hidden');
+	
+});
+*/
