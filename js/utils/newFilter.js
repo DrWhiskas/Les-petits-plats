@@ -31,7 +31,6 @@ function setList(listArray) {
 }
 setList(newArray);
 
-
 /* AFFICHAGE DES LISTES */
 function displayList(target, array) {
     target.innerHTML=''
