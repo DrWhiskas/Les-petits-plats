@@ -50,13 +50,13 @@ usentensilsSelector.addEventListener('click', (e) => {
 });
 
 /* APPARREILS */
-appSelector.addEventListener('click', (e) => {
-    checkApplicances = !checkApplicances;
-	const boxFilter = document.getElementById('filter__box__appareils');
-	appSelector.classList.toggle('active');
-	boxFilter.classList.toggle('hidden'); 
-});
-	
+	appSelector.addEventListener('click', (e) => {
+		checkApplicances = !checkApplicances;
+		const boxFilter = document.getElementById('filter__box__appareils');
+		appSelector.classList.toggle('active');
+		boxFilter.classList.toggle('hidden'); 
+	});
+		
 /* INGREDIENTS */
 ingredientSelector.addEventListener('click', (e) => {
     checkIngredient = !checkIngredient;
