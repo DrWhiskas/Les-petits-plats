@@ -5,6 +5,7 @@ function createTag(){
     let tagItems = document.querySelectorAll('.filter__item')    
     tagItems.forEach((item) => {
     item.addEventListener('click', (e) => {
+        console.log(item,': item');
        let text = e.target.textContent;
        let tag = document.createElement('span')
        let type
@@ -38,9 +39,10 @@ function createTag(){
 		tagItems.forEach((newItem) => {
 		    if (newItem.innerText == e.target.innerText) {
 			    newItem.style.display = 'none';
+                console.log(tagArray);
 		    }
-            
 	    });
+        
         /* SUPPRIMER UN ELEMENT DE LA LISTE DES TAG */
         tag.addEventListener('click', (e) =>{
             /* effacer l'element html*/
@@ -71,8 +73,6 @@ function createTag(){
                                             
     })   
 })
-
-    
 
 }
 /* RETIRER UN TAG */
