@@ -4,10 +4,14 @@ function setList(listArray) {
 	ingredientArray = [];
 
 	/* DOM */
-	const usentensilList = document.getElementById('filter__box__usetensils__list');	
+	const usentensilList = document.getElementById(
+		'filter__box__usetensils__list'
+	);
 	const appList = document.getElementById('filter__box__appareils__list');
-	const ingredientList = document.getElementById('filter__box__ingredient__list');
-	
+	const ingredientList = document.getElementById(
+		'filter__box__ingredient__list'
+	);
+
 	/* REMPLISSAGE DES TABLEAUX */
 	listArray.forEach((item) => {
 		item.ustensils.forEach((use) => {
@@ -18,7 +22,7 @@ function setList(listArray) {
 			ingredientArray.push(element.ingredient);
 		});
 	});
-	/* SUPPRIMER LES DOUBLONS */ 
+	/* SUPPRIMER LES DOUBLONS */
 	usetensilArray = [...new Set(usetensilArray)];
 	appArray = [...new Set(appArray)];
 	ingredientArray = [...new Set(ingredientArray)];
@@ -33,10 +37,26 @@ setList(newArray);
 
 /* AFFICHAGE DES LISTES */
 function displayList(target, array) {
-    target.innerHTML=''
+	let tagItems = document.querySelectorAll('.filter__item');
+	target.innerHTML = '';
+	console.log(tagItems.length);
 	array.forEach((item) => {
 		array = [...new Set(array)];
-		target.innerHTML += `<li class="filter__item">${item}</li>`;
+		let bool = true;
+		if (tagItems) {
+			console.log('toto');
+			tagItems.forEach((tag) => {
+				if (tag.innerText == item) {
+					bool = false;
+				}
+				if (bool == true) {
+					target.innerHTML += `<li class="filter__item">${item}</li>`;
+				}
+			});
+		} else {
+
+			target.innerHTML += `<li class="filter__item">${item}</li>`;
+		}
 	});
 }
 
@@ -59,36 +79,34 @@ ingredientSelector.addEventListener('keyup', (e) => {
 	const input = e.target;
 	const attribute = input.getAttribute('data-listType');
 	searchFilter(searchKey, attribute);
-})
+});
 
-function searchFilter(keys,attribute) {
-	let appItem
-	if (attribute == 'appareils'){
+function searchFilter(keys, attribute) {
+	let appItem;
+	if (attribute == 'appareils') {
 		let list = document.getElementById('filter__box__appareils__list');
 		appItem = list.querySelectorAll('.filter__item');
-	}
-	else if(attribute =='ustensiles'){
+	} else if (attribute == 'ustensiles') {
 		let list = document.getElementById('filter__box__usetensils__list');
 		appItem = list.querySelectorAll('.filter__item');
-	}
-	else{
+	} else {
 		let list = document.getElementById('filter__box__ingredient__list');
 		appItem = list.querySelectorAll('.filter__item');
 	}
-		if (keys.length != 0) {
-			appItem.forEach((item) => {
-				let oui = item.innerText;
-				if (!oui.toLowerCase().includes(keys)) {
-					item.style.display = 'none';
-				} else {
-					item.style.display = 'block';
-				}
-			});
-		} else {
-			appItem.forEach((item) =>{
+	if (keys.length != 0) {
+		appItem.forEach((item) => {
+			let oui = item.innerText;
+			if (!oui.toLowerCase().includes(keys)) {
+				item.style.display = 'none';
+			} else {
 				item.style.display = 'block';
-			})
-		}
+			}
+		});
+	} else {
+		appItem.forEach((item) => {
+			item.style.display = 'block';
+		});
+	}
 }
 
 function removeTwins(array) {
