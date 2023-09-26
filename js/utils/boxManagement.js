@@ -63,7 +63,6 @@ usentensilsSelector.addEventListener('click', (e) => {
 	);
 	closeBox(boxIngreFilter, boxAppFilter, ingredientSelector, appSelector);
 	checkUstensil = !checkUstensil;
-	console.log(checkApplicances);
 	usentensilsSelector.classList.toggle('active');
 	boxUseFilter.classList.toggle('hidden');
 	const arrow = document.getElementById('arrow__usentesiles');

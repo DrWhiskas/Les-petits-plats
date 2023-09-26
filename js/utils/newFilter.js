@@ -37,21 +37,24 @@ setList(newArray);
 
 /* AFFICHAGE DES LISTES */
 function displayList(target, array) {
-	let tagItems = document.querySelectorAll('.filter__item');
+	let tagItems = document.querySelectorAll('.tag');
 	target.innerHTML = '';
-	console.log(typeof (tagItems.length));
 	array.forEach((item) => {
 		array = [...new Set(array)];
-		let bool = true;
-			tagItems.forEach((tag) => {
-				if (tag.innerText == item) {
-					bool = false;
+		let bool = true
+
+		if(tagItems.length > 0 ){
+			tagItems.forEach((tag) =>{
+				if(tag.innerText == item){
+					bool = false
 				}
-				if (bool == true) {
-					target.innerHTML += `<li class="filter__item">${item}</li>`;
-					console.log('toto');
+			})
+		}
+		if(bool == true){
+			target.innerHTML += `
+				<li class="filter__item">${item}</li>
+			`
 				}
-			});
 	});
 }
 
