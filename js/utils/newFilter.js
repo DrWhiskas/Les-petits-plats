@@ -39,24 +39,19 @@ setList(newArray);
 function displayList(target, array) {
 	let tagItems = document.querySelectorAll('.filter__item');
 	target.innerHTML = '';
-	console.log(tagItems.length);
+	console.log(typeof (tagItems.length));
 	array.forEach((item) => {
 		array = [...new Set(array)];
 		let bool = true;
-		if (tagItems) {
-			console.log('toto');
 			tagItems.forEach((tag) => {
 				if (tag.innerText == item) {
 					bool = false;
 				}
 				if (bool == true) {
 					target.innerHTML += `<li class="filter__item">${item}</li>`;
+					console.log('toto');
 				}
 			});
-		} else {
-
-			target.innerHTML += `<li class="filter__item">${item}</li>`;
-		}
 	});
 }
 
