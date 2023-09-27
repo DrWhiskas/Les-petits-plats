@@ -55,14 +55,26 @@ body {
   background-color: #C7BEBE;
   border-radius: 5px 5px 0px 0px;
 }
+#recipes .recipes__card__main {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4%;
+}
 #recipes .recipes__card__dish-name {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 4%;
 }
+#recipes .recipes__card__dish__time {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.6px;
+}
 #recipes .recipes__card__dish__title {
   font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 400;
 }
 #recipes .recipes__card__list__ingredients {
   font-size: 14px;
@@ -79,6 +91,10 @@ body {
 #recipes .recipes__card__list {
   color: black;
   margin: 0;
+}
+#recipes .recipes__card__list__description__text {
+  width: 100%;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 992px) {
@@ -141,6 +157,35 @@ body {
   position: relative;
   right: 36px;
   place-self: center;
+}
+.filter__menu {
+  margin-left: 5%;
+  color: white;
+}
+.filter__menu ::-moz-placeholder {
+  color: white;
+  padding: 10%;
+  left: 10%;
+}
+.filter__menu ::placeholder {
+  color: white;
+  padding: 10%;
+  left: 10%;
+}
+.filter__item {
+  flex: 1 0 calc((100% - 20px) / 4);
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.filter__box {
+  height: auto;
+  position: absolute;
+  width: 500px;
+  border-radius: 0px 5px;
+  color: white;
+  border: none;
+  margin-top: -10px;
 }
 
 #ingredients {
@@ -228,23 +273,6 @@ a {
   cursor: pointer;
 }
 
-.filter__menu {
-  margin-left: 5%;
-  color: white;
-}
-
-.filter__menu ::-moz-placeholder {
-  color: white;
-  padding: 10%;
-  left: 10%;
-}
-
-.filter__menu ::placeholder {
-  color: white;
-  padding: 10%;
-  left: 10%;
-}
-
 .hidden {
   display: none;
 }
@@ -285,21 +313,4 @@ ul {
   padding: 18px;
   display: flex;
   flex-wrap: wrap;
-}
-
-.filter__item {
-  flex: 1 0 calc((100% - 20px) / 4);
-  margin-right: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.recipe__card__main {
-  display: flex;
-  padding: 0 4%;
-}
-
-.recipes__card__list__description__text {
-  width: 100%;
-  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */

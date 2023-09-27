@@ -46,15 +46,13 @@ function searchRecipe(keys) {
 		setList(newArray);
 		newArray = [...new Set(newArray)];
 		recipesDisplay(newArray);
-		console.log(newArray);
 	} else {
 		setList(recipes);
 		newArray = [...new Set(recipes)];
-		recipesDisplay(newArray);
-		
+		recipesDisplay(newArray);	
 	}
 }
-
+/* RESET LA LISTE DE RECETTE */
 function resetRecipes(){
 	recipesSection.innerHTML = ``
 }

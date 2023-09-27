@@ -21,15 +21,6 @@
     cursor: pointer;
 }
 
-.filter__menu{
-    margin-left: 5%;
-    color: white;
-}
-.filter__menu ::placeholder{
-    color: white;
-    padding: 10%;
-    left: 10%;
-}
 
 .hidden{
     display: none;
@@ -50,7 +41,6 @@ li{
     color: white;
     border: none;
     margin-top: -10px;
-    //z-index: -1;
 }
 .usetensils{
     background-color: $usetensiles;
@@ -66,18 +56,4 @@ ul{
     padding: 18px;
     display: flex;
     flex-wrap: wrap;
-}
-.filter__item{
-     flex: 1 0 calc((100% - 20px) / 4);
-  margin-right: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-.recipe__card__main{
-    display: flex;
-    padding: 0 4%;
-}
-.recipes__card__list__description__text{
-    width: 100%;
-    font-size: 14px;
 }

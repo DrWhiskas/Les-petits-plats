@@ -13,14 +13,25 @@ function closeBox(box1, box2, selector1, selector2) {
 	box2.classList.add('hidden');
 }
 
-/* SELECTOR */
+function toggleArrow(arrow1, arrow2, arrow3) {
+	arrow1.classList.toggle('rotate');
+	arrow2.classList.remove('rotate');
+	arrow3.classList.remove('rotate');
+}
+/* DOM SELECTOR */
 const usentensilsSelector = document.getElementById('ustensiles');
 const appSelector = document.getElementById('appareils');
 const ingredientSelector = document.getElementById('ingredients');
 
+/* DOM BOX */
 const boxIngreFilter = document.getElementById('filter__box__ingredients');
 const boxAppFilter = document.getElementById('filter__box__appareils');
 const boxUseFilter = document.getElementById('filter__box__usetensils');
+
+/* DOM ARROW */
+const arrowIng = document.getElementById('arrow__ingredients');
+const arrowApp = document.getElementById('arrow__appareils');
+const arrowUse = document.getElementById('arrow__usentesiles');
 
 /* INGREDIENTS */
 ingredientSelector.addEventListener('click', (e) => {
@@ -32,8 +43,7 @@ ingredientSelector.addEventListener('click', (e) => {
 	checkIngredient = !checkIngredient;
 	ingredientSelector.classList.toggle('active');
 	boxIngreFilter.classList.toggle('hidden');
-	const arrow = document.getElementById('arrow__ingredients');
-	arrow.classList.toggle('rotate');
+	toggleArrow(arrowIng, arrowApp, arrowUse);
 });
 
 /* APPARREILS */
@@ -49,10 +59,9 @@ appSelector.addEventListener('click', (e) => {
 		usentensilsSelector
 	);
 	checkApplicances = !checkApplicances;
-	const arrow = document.getElementById('arrow__appareils');
-	arrow.classList.toggle('rotate');
 	appSelector.classList.toggle('active');
 	boxAppFilter.classList.toggle('hidden');
+	toggleArrow(arrowApp, arrowIng, arrowUse);
 });
 
 /* USETENSILES */
@@ -65,6 +74,6 @@ usentensilsSelector.addEventListener('click', (e) => {
 	checkUstensil = !checkUstensil;
 	usentensilsSelector.classList.toggle('active');
 	boxUseFilter.classList.toggle('hidden');
-	const arrow = document.getElementById('arrow__usentesiles');
-	arrow.classList.toggle('rotate');
+
+	toggleArrow(arrowUse, arrowIng, arrowApp);
 });

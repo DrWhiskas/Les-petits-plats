@@ -16,14 +16,26 @@
             background-color: $cardTop;
             border-radius: 5px 5px 0px 0px;
         }
+        &__main{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 4%;
+        }
         &__dish-name{
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 4%;
         }
+        &__dish__time{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21.6px;
+        }
         &__dish__title{
             font-size: 18px;
+            line-height: 21.6px;
+            font-weight: 400;
         }
         &__list__ingredients{
             font-size: 14px;
@@ -40,6 +52,10 @@
         &__list{
             color: black;
             margin: 0;
+            &__description__text{
+                width: 100%;
+                font-size: 14px;
+            }
         }
     }
 }

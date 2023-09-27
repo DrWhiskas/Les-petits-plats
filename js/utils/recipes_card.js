@@ -12,21 +12,22 @@ function createCardName(recipe) {
 	recipesName.classList = 'recipes__card__dish-name';
 	recipesName.innerHTML = `
     <h3 class="recipes__card__dish__title">${recipe.name}</h3>
-    <span class="recipes__card__dish__time"><i class="fa-regular fa-clock"></i>${recipe.time} min</span>
+    <span class="recipes__card__dish__time"><i class="fa-regular fa-clock"></i> ${recipe.time} min</span>
   `;
 	return recipesName;
 }
-function createCardMain(recipe){
-	const recipeMain = document.createElement('div')
-	recipeMain.classList.add('recipe__card__main')
+/* MAIN */
+function createCardMain(recipe) {
+	const recipeMain = document.createElement('div');
+	recipeMain.classList.add('recipes__card__main');
 
 	const recipeIngredients = createCardIngredients(recipe);
 	recipeMain.appendChild(recipeIngredients);
 
-  	const recipeSteps = createCardSteps(recipe);
+	const recipeSteps = createCardSteps(recipe);
 	recipeMain.appendChild(recipeSteps);
 
-	return recipeMain
+	return recipeMain;
 }
 function createCardIngredients(recipe) {
 	const recipesIngredient = document.createElement('div');
@@ -35,37 +36,35 @@ function createCardIngredients(recipe) {
 		const newIngredient = document.createElement('p');
 		newIngredient.classList = 'recipes__card__list';
 		if (ingredient.quantity) {
-				if(ingredient.unit){
-					if(ingredient.unit ==='grammes'){
-						ingredient.unit = 'g';
-					}
+			if (ingredient.unit) {
+				if (ingredient.unit === 'grammes') {
+					ingredient.unit = 'g';
+				}
 				newIngredient.innerHTML = `
       				<span class="recipes__card__list__ingredients">
         			<strong>${ingredient.ingredient}</strong> : ${ingredient.quantity}${ingredient.unit}
       				</span>
     			`;
-				}else{
-					newIngredient.innerHTML = `
+			} else {
+				newIngredient.innerHTML = `
       				<span class="recipes__card__list__ingredients">
         			<strong>${ingredient.ingredient}</strong> : ${ingredient.quantity}
       				</span>
     			`;
-				}
-
-				
-		}else{
+			}
+		} else {
 			newIngredient.innerHTML = `
       			<span class="recipes__card__list__ingredients">
         		<strong>${ingredient.ingredient}</strong>
       			</span>
     `;
 		}
-			
+
 		recipesIngredient.appendChild(newIngredient);
 	});
 	return recipesIngredient;
 }
-
+/* STEPS */
 function createCardSteps(recipe) {
 	const recipeStep = document.createElement('div');
 	recipeStep.classList = 'recipes__card__list__description';
@@ -78,7 +77,7 @@ function createCard(recipe) {
 	recipesCard.classList = 'recipes__card';
 	recipesCard.appendChild(createCardHeader());
 	recipesCard.appendChild(createCardName(recipe));
-	recipesCard.appendChild(createCardMain(recipe))
+	recipesCard.appendChild(createCardMain(recipe));
 	return recipesCard;
 }
 

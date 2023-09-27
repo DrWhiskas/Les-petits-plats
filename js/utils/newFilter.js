@@ -1,3 +1,4 @@
+/* REMPLISSAGE DES LISTES */
 function setList(listArray) {
 	usetensilArray = [];
 	appArray = [];
@@ -41,22 +42,22 @@ function displayList(target, array) {
 	target.innerHTML = '';
 	array.forEach((item) => {
 		array = [...new Set(array)];
-		let bool = true
-		if(tagItems.length > 0 ){
-			tagItems.forEach((tag) =>{
-				if(tag.innerText == item){
-					bool = false
+		let bool = true;
+		if (tagItems.length > 0) {
+			tagItems.forEach((tag) => {
+				if (tag.innerText == item) {
+					bool = false;
 				}
-			})
+			});
 		}
-		if(bool == true){
+		if (bool == true) {
 			target.innerHTML += `
 				<li class="filter__item">${item}</li>
-			`
-				}
+			`;
+		}
 	});
 }
-
+/* RECHERCHE PAR CLAVIER */
 appSelector.addEventListener('keyup', (e) => {
 	const searchKey = e.target.value;
 	const input = e.target;
@@ -78,6 +79,7 @@ ingredientSelector.addEventListener('keyup', (e) => {
 	searchFilter(searchKey, attribute);
 });
 
+/* FILTRER LES ELEMENTS */
 function searchFilter(keys, attribute) {
 	let appItem;
 	if (attribute == 'appareils') {
@@ -92,8 +94,8 @@ function searchFilter(keys, attribute) {
 	}
 	if (keys.length != 0) {
 		appItem.forEach((item) => {
-			let oui = item.innerText;
-			if (!oui.toLowerCase().includes(keys)) {
+			let app = item.innerText;
+			if (!app.toLowerCase().includes(keys)) {
 				item.style.display = 'none';
 			} else {
 				item.style.display = 'block';
@@ -109,4 +111,3 @@ function searchFilter(keys, attribute) {
 function removeTwins(array) {
 	array = [...new Set(array)];
 }
-

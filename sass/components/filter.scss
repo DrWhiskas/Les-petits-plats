@@ -29,13 +29,37 @@
             place-self: center;
         }
     }
+    &__menu{
+        margin-left: 5%;
+        color: white;
+        & ::placeholder{
+            color: white;
+            padding: 10%;
+            left: 10%;
+        }
+    }
+    &__item{
+        flex: 1 0 calc((100% - 20px) / 4);
+        margin-right: 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    &__box{
+        height: auto;
+        position: absolute;
+        width: 500px;
+        border-radius: 0px 5px;
+        color: white;
+        border: none;
+        margin-top: -10px;
+    }
 }
 #ingredients{
     background-color: $ingredients;
 }
 #ingredients ::placeholder{
     color: white;
-        width: 85%;
+    width: 85%;
 
 }
 #appareils{
