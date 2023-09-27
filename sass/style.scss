@@ -10,6 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-left: 4% ;
 }
 .tag{
     color: white;
@@ -20,7 +21,9 @@
     margin-left: 15px;
     cursor: pointer;
 }
-
+.cross{
+    margin-left: 6px;
+}
 
 .hidden{
     display: none;
@@ -31,16 +34,6 @@
 }
 li{
     color: white;
-}
-
-.filter__box{
-    height: auto;
-    position: absolute;
-    width: 500px;
-    border-radius: 0px 5px;
-    color: white;
-    border: none;
-    margin-top: -10px;
 }
 .usetensils{
     background-color: $usetensiles;
@@ -56,4 +49,12 @@ ul{
     padding: 18px;
     display: flex;
     flex-wrap: wrap;
+}
+@media screen and (max-width: 680px){
+    ul{
+        flex-direction: column;
+    }
+    .active{
+        width: 299px;
+    }
 }

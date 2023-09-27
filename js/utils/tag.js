@@ -27,7 +27,7 @@ function createTag() {
 			e.target.style.display = 'none';
 			tagArray.push(`${type}${text}`);
 			checkIngredient == false;
-			tag.innerHTML = `${text}<i class="fa-regular fa-circle-xmark"></i>`;
+			tag.innerHTML = `${text}<i class="fa-regular fa-circle-xmark cross"></i>`;
 
 			// filtre du tag
 			filterTag(tagArray);

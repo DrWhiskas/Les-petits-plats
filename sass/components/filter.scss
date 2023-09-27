@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 2%;
+    margin-left: 5%;
     &__items{
         display: flex;
         flex-wrap: wrap;
@@ -10,6 +11,7 @@
             width: 170px;
             height: 69px;
             border-radius: 5px;
+            padding: 8px;
             color: white;
             outline: none;
             border: none;
@@ -30,7 +32,6 @@
         }
     }
     &__menu{
-        margin-left: 5%;
         color: white;
         & ::placeholder{
             color: white;
@@ -47,7 +48,7 @@
     &__box{
         height: auto;
         position: absolute;
-        width: 500px;
+        width: 512px;
         border-radius: 0px 5px;
         color: white;
         border: none;
@@ -89,12 +90,35 @@ a{
 }
 
 @media screen and (max-width: 992px){
-    #recipes{
+    .filter{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    & .recipes__card{
-        width: 38%;
-    }
+    flex-direction: column;
+    align-content: center;
+        &__box{
+            width: 512px;
+            position: relative;
+        }
+        &__menu{
+            margin-bottom: 15px;
+        }
     }
 }
+
+@media screen and (max-width: 680px){
+    .filter{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+        &__box{
+            width: 315px;
+            position: relative;
+        }
+        &__menu{
+            margin-bottom: 15px;
+        }
+    }
+}
+
+
+
+

@@ -24,11 +24,21 @@ body {
   background-color: #E7E7E7;
   width: 88%;
   height: 60px;
-  padding: 10px;
+  padding: 15px;
   font-size: 25px;
   border: none;
   outline: none;
   border-radius: 5px;
+}
+.search__input__bar::-moz-placeholder {
+  font-weight: 400;
+  size: 18px;
+  line-height: 21.6px;
+}
+.search__input__bar::placeholder {
+  font-weight: 400;
+  size: 18px;
+  line-height: 21.6px;
 }
 .search__input__loop {
   position: relative;
@@ -115,7 +125,7 @@ body {
     align-items: center;
   }
   #recipes .recipes__card {
-    width: 60%;
+    width: 90%;
   }
 }
 /* FILTERS */
@@ -125,6 +135,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-top: 2%;
+  margin-left: 5%;
 }
 .filter__items {
   display: flex;
@@ -134,6 +145,7 @@ body {
   width: 170px;
   height: 69px;
   border-radius: 5px;
+  padding: 8px;
   color: white;
   outline: none;
   border: none;
@@ -159,7 +171,6 @@ body {
   place-self: center;
 }
 .filter__menu {
-  margin-left: 5%;
   color: white;
 }
 .filter__menu ::-moz-placeholder {
@@ -181,7 +192,7 @@ body {
 .filter__box {
   height: auto;
   position: absolute;
-  width: 500px;
+  width: 512px;
   border-radius: 0px 5px;
   color: white;
   border: none;
@@ -232,13 +243,31 @@ a {
 }
 
 @media screen and (max-width: 992px) {
-  #recipes {
+  .filter {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
   }
-  #recipes .recipes__card {
-    width: 38%;
+  .filter__box {
+    width: 512px;
+    position: relative;
+  }
+  .filter__menu {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .filter {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .filter__box {
+    width: 315px;
+    position: relative;
+  }
+  .filter__menu {
+    margin-bottom: 15px;
   }
 }
 .header {
@@ -261,6 +290,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  margin-left: 4%;
 }
 
 .tag {
@@ -271,6 +301,10 @@ a {
   margin-top: 15px;
   margin-left: 15px;
   cursor: pointer;
+}
+
+.cross {
+  margin-left: 6px;
 }
 
 .hidden {
@@ -284,16 +318,6 @@ a {
 
 li {
   color: white;
-}
-
-.filter__box {
-  height: auto;
-  position: absolute;
-  width: 500px;
-  border-radius: 0px 5px;
-  color: white;
-  border: none;
-  margin-top: -10px;
 }
 
 .usetensils {
@@ -313,4 +337,13 @@ ul {
   padding: 18px;
   display: flex;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 680px) {
+  ul {
+    flex-direction: column;
+  }
+  .active {
+    width: 299px;
+  }
 }/*# sourceMappingURL=style.css.map */

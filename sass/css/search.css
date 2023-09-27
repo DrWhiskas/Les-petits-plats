@@ -13,11 +13,21 @@
   background-color: #E7E7E7;
   width: 88%;
   height: 60px;
-  padding: 10px;
+  padding: 15px;
   font-size: 25px;
   border: none;
   outline: none;
   border-radius: 5px;
+}
+.search__input__bar::-moz-placeholder {
+  font-weight: 400;
+  size: 18px;
+  line-height: 21.6px;
+}
+.search__input__bar::placeholder {
+  font-weight: 400;
+  size: 18px;
+  line-height: 21.6px;
 }
 .search__input__loop {
   position: relative;
