@@ -42,7 +42,6 @@ function displayList(target, array) {
 	array.forEach((item) => {
 		array = [...new Set(array)];
 		let bool = true
-
 		if(tagItems.length > 0 ){
 			tagItems.forEach((tag) =>{
 				if(tag.innerText == item){
@@ -110,3 +109,4 @@ function searchFilter(keys, attribute) {
 function removeTwins(array) {
 	array = [...new Set(array)];
 }
+

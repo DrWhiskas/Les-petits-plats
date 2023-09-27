@@ -5,7 +5,6 @@ function createTag() {
 	let tagItems = document.querySelectorAll('.filter__item');
 	tagItems.forEach((item) => {
 		item.addEventListener('click', (e) => {
-			console.log(item, ': item');
 			let text = e.target.textContent;
 			let tag = document.createElement('span');
 			let type;
@@ -32,17 +31,14 @@ function createTag() {
 
 			// filtre du tag
 			filterTag(tagArray);
-			console.log(tagSelector);
 			tagSelector.appendChild(tag);
 			/* CLIQUE POUR SUPPRIMER UN TAG ET LE REMETTRE DANS LA LISTE */
 			tagItems = document.querySelectorAll('.filter__item');
 			tagItems.forEach((newItem) => {
 				if (newItem.innerText == e.target.innerText) {
 					newItem.style.display = 'none';
-					console.log(tagArray);
 				}
 			});
-			console.log(tag);
 			/* SUPPRIMER UN ELEMENT DE LA LISTE DES TAG */
 			tag.addEventListener('click', (e) => {
 				/* effacer l'element html*/
@@ -66,8 +62,6 @@ function createTag() {
 					}
 				});
 				filterTag(tagArray);
-
-				
 			});
 		});
 	});
@@ -77,8 +71,6 @@ function createTag() {
 /* FILTRE LES TAG */
 function filterTag(tags) {
 	let newTag = [];
-	console.log(tags);
-	let tagSelected = [];
 	newArray.forEach((recipe) => {
 		let checkRecipe = true;
 		tags.forEach((tag) => {
@@ -111,10 +103,7 @@ function filterTag(tags) {
 			newTag.push(recipe);
 		}
 	});
-
 	resetRecipes();
 	recipesDisplay(newTag);
 	setList(newTag);
 }
-
-/* => FACTORISER */

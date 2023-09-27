@@ -48,10 +48,14 @@ function searchRecipe(keys) {
 		recipesDisplay(newArray);
 		console.log(newArray);
 	} else {
-		recipesDisplay(recipes);
+		setList(recipes);
+		newArray = [...new Set(recipes)];
+		recipesDisplay(newArray);
+		
 	}
 }
 
 function resetRecipes(){
 	recipesSection.innerHTML = ``
 }
+

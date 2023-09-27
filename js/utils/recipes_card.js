@@ -34,8 +34,6 @@ function createCardIngredients(recipe) {
 	recipe.ingredients.forEach((ingredient) => {
 		const newIngredient = document.createElement('p');
 		newIngredient.classList = 'recipes__card__list';
-		console.log(ingredient.quantity);
-		console.log(ingredient.quantity);
 		if (ingredient.quantity) {
 				if(ingredient.unit){
 					if(ingredient.unit ==='grammes'){
@@ -89,5 +87,4 @@ function recipesDisplay(recipesArray) {
 	recipesArray.forEach((recipe) => {
 		recipesSection.appendChild(createCard(recipe));
 	});
-	console.log(recipesArray);
 }
