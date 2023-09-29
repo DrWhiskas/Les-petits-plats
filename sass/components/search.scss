@@ -9,13 +9,21 @@
             background-color: $search;
             width: 88%;
             height: 60px;
-            padding: 10px;
+            padding: 15px;
             font-size: 25px;
             border: none;
+            outline: none;
+            border-radius: 5px;
+            &::placeholder{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21.6px;
+        }
         }
         &__loop{
             position: relative;
             right: 50px;
         }
     }
+
 }

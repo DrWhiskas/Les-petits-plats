@@ -2,9 +2,8 @@
 .filter{
     display: flex;
     flex-wrap: wrap;
-    //width: 100%;
-    margin-left: 6%;
     margin-top: 2%;
+    margin-left: 5%;
     &__items{
         display: flex;
         flex-wrap: wrap;
@@ -12,17 +11,48 @@
             width: 170px;
             height: 69px;
             border-radius: 5px;
+            padding: 8px;
             color: white;
+            outline: none;
             border: none;
             &:hover{
                 cursor: pointer;
             }
+            &::placeholder{
+                font-size: 18px;
+                line-height: 21.6px;
+                align-items: center;
+                font-weight: 700;
+            }
         }
         &__arrow{
             position: relative;
-            right: 20px;
+            right: 36px;
             place-self: center;
         }
+    }
+    &__menu{
+        color: white;
+        & ::placeholder{
+            color: white;
+            padding: 10%;
+            left: 10%;
+        }
+    }
+    &__item{
+        flex: 1 0 calc((100% - 20px) / 4);
+        margin-right: 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    &__box{
+        height: auto;
+        position: absolute;
+        width: 512px;
+        border-radius: 0px 5px;
+        color: white;
+        border: none;
+        margin-top: -10px;
     }
 }
 #ingredients{
@@ -30,7 +60,7 @@
 }
 #ingredients ::placeholder{
     color: white;
-        width: 85%;
+    width: 85%;
 
 }
 #appareils{
@@ -46,6 +76,11 @@ li{
 a{
     text-decoration: none;
 }
+
+.rotate{
+    transform: rotate(180deg);
+}
+
 .filter__items__input__dropdown-menu{
     display: flex;
     justify-content: space-between;
@@ -54,29 +89,36 @@ a{
     display: none;
 }
 
-/* TESTS */ 
-
-#gazo{
-    height: 397px;
-    width: 667px;
-    background: $usetensiles;
-    border-radius: 5px;
-    overflow: hidden;
-}
-#sadge{
-    width: 100%;
-    background: $usetensiles;
-    color: white;
-    border: none;
-    height: 10%;
-}
-.list{
-    height: auto;
-    color: blue;
+@media screen and (max-width: 992px){
+    .filter{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+        &__box{
+            width: 512px;
+            position: relative;
+        }
+        &__menu{
+            margin-bottom: 15px;
+        }
+    }
 }
 
-
-
-.visible{
-    height: auto;
+@media screen and (max-width: 680px){
+    .filter{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+        &__box{
+            width: 315px;
+            position: relative;
+        }
+        &__menu{
+            margin-bottom: 15px;
+        }
+    }
 }
+
+
+
+

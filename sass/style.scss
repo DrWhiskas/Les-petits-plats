@@ -10,6 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-left: 4% ;
 }
 .tag{
     color: white;
@@ -20,15 +21,8 @@
     margin-left: 15px;
     cursor: pointer;
 }
-
-.filter__menu{
-    margin-left: 5%;
-    color: white;
-}
-.filter__menu ::placeholder{
-    color: white;
-    padding: 10%;
-    left: 10%;
+.cross{
+    margin-left: 6px;
 }
 
 .hidden{
@@ -40,17 +34,6 @@
 }
 li{
     color: white;
-}
-
-.filter__box{
-    height: auto;
-    position: absolute;
-    width: 500px;
-    border-radius: 0px 5px;
-    color: white;
-    border: none;
-    margin-top: -10px;
-    //z-index: -1;
 }
 .usetensils{
     background-color: $usetensiles;
@@ -67,17 +50,11 @@ ul{
     display: flex;
     flex-wrap: wrap;
 }
-.filter__item{
-     flex: 1 0 calc((100% - 20px) / 4);
-  margin-right: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-.recipe__card__main{
-    display: flex;
-    padding: 0 4%;
-}
-.recipes__card__list__description__text{
-    width: 100%;
-    font-size: 14px;
+@media screen and (max-width: 680px){
+    ul{
+        flex-direction: column;
+    }
+    .active{
+        width: 299px;
+    }
 }

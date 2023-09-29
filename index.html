@@ -26,7 +26,7 @@
 		</header>
 		<main>
 			<section class="search">
-				<form action="" class="search__input">
+				<form class="search__input">
 					<input
 						type="text"
 						name="search"
@@ -45,10 +45,10 @@
 						type="text"
 						name="ingredients"
 						id="ingredients"
-						listType ="ingredients"
+						data-listType ="ingredients"
 						placeholder="Ingredients"
 					/>
-					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
+					<i class="fa-solid fa-chevron-down filter__items__arrow" id="arrow__ingredients"></i>
 					<div class="filter__box ingredient hidden" id="filter__box__ingredients">
 						<ul id="filter__box__ingredient__list"></ul>
 					</div>
@@ -59,10 +59,10 @@
 						type="text"
 						name="appareils"
 						id="appareils"
-						listType ="appareils"
+						data-listType ="appareils"
 						placeholder="Appareils"
 					/>
-					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
+					<i class="fa-solid fa-chevron-down filter__items__arrow" id="arrow__appareils"></i>
 					<div class="filter__box appareils hidden" id="filter__box__appareils">
 						<ul id="filter__box__appareils__list"></ul>
 					</div>
@@ -73,10 +73,10 @@
 						type="text"
 						name="ustensiles"
 						id="ustensiles"
-						listType ="ustensiles"
+						data-listType ="ustensiles"
 						placeholder="Ustensiles"
 					/>
-					<i class="fa-solid fa-chevron-down filter__items__arrow"></i>
+					<i class="fa-solid fa-chevron-down filter__items__arrow" id="arrow__usentesiles"></i>
 					<div class="filter__box usetensils hidden" id="filter__box__usetensils">
 						<ul id="filter__box__usetensils__list"></ul>	
 					</div>
@@ -84,12 +84,12 @@
 			</section>
 			<section id="recipes"></section>
 		</main>
+		<script src="./js/data/recipes.js"></script>
+		<script src="./js/utils/boxManagement.js"></script>
+		<script src="./js/utils/recipes_card.js"></script>
+		<script src="./js/utils/searchBar.js"></script>
+		<script src="./js/utils/tag.js"></script>
+		<script src="./js/utils/newFilter.js"></script>
+		<script src="./js/index.js"></script>
 	</body>
-	<script src="./js/data/recipes.js"></script>
-	<script src="/js/utils/recipes_card.js"></script>
-	<script src="./js/utils/searchBar.js"></script>
-	<script src="./js/utils/tag.js"></script>
-	<script src="./js/utils/newFilter.js"></script>
-	<script src="./js/index.js"></script>
-	
 </html>
