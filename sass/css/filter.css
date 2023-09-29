@@ -4,8 +4,8 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 6%;
   margin-top: 2%;
+  margin-left: 5%;
 }
 .filter__items {
   display: flex;
@@ -15,16 +15,58 @@
   width: 170px;
   height: 69px;
   border-radius: 5px;
+  padding: 8px;
   color: white;
+  outline: none;
   border: none;
 }
 .filter__items__input:hover {
   cursor: pointer;
 }
+.filter__items__input::-moz-placeholder {
+  font-size: 18px;
+  line-height: 21.6px;
+  align-items: center;
+  font-weight: 700;
+}
+.filter__items__input::placeholder {
+  font-size: 18px;
+  line-height: 21.6px;
+  align-items: center;
+  font-weight: 700;
+}
 .filter__items__arrow {
   position: relative;
-  right: 20px;
+  right: 36px;
   place-self: center;
+}
+.filter__menu {
+  color: white;
+}
+.filter__menu ::-moz-placeholder {
+  color: white;
+  padding: 10%;
+  left: 10%;
+}
+.filter__menu ::placeholder {
+  color: white;
+  padding: 10%;
+  left: 10%;
+}
+.filter__item {
+  flex: 1 0 calc((100% - 20px) / 4);
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.filter__box {
+  height: auto;
+  position: absolute;
+  width: 512px;
+  border-radius: 0px 5px;
+  color: white;
+  border: none;
+  margin-top: -10px;
 }
 
 #ingredients {
@@ -58,6 +100,10 @@ a {
   text-decoration: none;
 }
 
+.rotate {
+  transform: rotate(180deg);
+}
+
 .filter__items__input__dropdown-menu {
   display: flex;
   justify-content: space-between;
@@ -66,28 +112,31 @@ a {
   display: none;
 }
 
-/* TESTS */
-#gazo {
-  height: 397px;
-  width: 667px;
-  background: #ED6454;
-  border-radius: 5px;
-  overflow: hidden;
+@media screen and (max-width: 992px) {
+  .filter {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .filter__box {
+    width: 512px;
+    position: relative;
+  }
+  .filter__menu {
+    margin-bottom: 15px;
+  }
 }
-
-#sadge {
-  width: 100%;
-  background: #ED6454;
-  color: white;
-  border: none;
-  height: 10%;
-}
-
-.list {
-  height: auto;
-  color: blue;
-}
-
-.visible {
-  height: auto;
+@media screen and (max-width: 680px) {
+  .filter {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .filter__box {
+    width: 315px;
+    position: relative;
+  }
+  .filter__menu {
+    margin-bottom: 15px;
+  }
 }/*# sourceMappingURL=filter.css.map */

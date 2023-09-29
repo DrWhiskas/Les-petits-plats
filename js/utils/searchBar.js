@@ -1,8 +1,8 @@
 let newArray = recipes;
-let usetensilArray = []
+let usetensilArray = [];
 let ingredientArray = [];
-let appArray = []
-let testArray = []
+let appArray = [];
+let testArray = [];
 // DOM
 const searchSelection = document.getElementById('search');
 const recipesSection = document.getElementById('recipes');
@@ -14,51 +14,45 @@ searchSelection.addEventListener('keyup', (e) => {
 /* TRAITEMENT DE LA BARRE DE RECHERCHE */
 function searchRecipe(keys) {
 	recipesSection.innerHTML = '';
-	newArray = recipes;
+	newArray = [];
 	usetensilArray = [];
 	ingredientArray = [];
 	appArray = [];
 	testArray = [];
 	if (keys.length > 2) {
-		newArray = [];
 		for (let i = 0; i < recipes.length; i++) {
-			let checkRecipes = false;
 			/* RECIPES TITLES */
 			if (recipes[i].name.toLowerCase().includes(keys)) {
 				newArray.push(recipes[i]);
-				checkRecipes = true;
 			}
 			/* USTENSILS */
 			for (let j = 0; j < recipes[i].ustensils.length; j++) {
 				if (recipes[i].ustensils[j].toLowerCase().includes(keys)) {
-						newArray.push(recipes[i]);
-						checkRecipes = true;
-						usetensilArray.push(recipes[i].ustensils[j]);
+					newArray.push(recipes[i]);
+					usetensilArray.push(recipes[i].ustensils);
 				}
 			}
 			/* APPAREILS */
 			if (recipes[i].appliance.toLowerCase().includes(keys)) {
 				newArray.push(recipes[i]);
-				checkRecipes = true;
 			}
 			/* INGREDIENTS */
 			for (let k = 0; k < recipes[i].ingredients.length; k++) {
 				if (recipes[i].ingredients[k].ingredient.toLowerCase().includes(keys)) {
 					newArray.push(recipes[i]);
-					checkRecipes = true;
-					ingredientArray.push(recipes[i].ingredients);
 				}
 			}
 		}
 		setList(newArray);
 		newArray = [...new Set(newArray)];
 		recipesDisplay(newArray);
-		console.log(newArray);
 	} else {
-		recipesDisplay(recipes);
+		setList(recipes);
+		newArray = [...new Set(recipes)];
+		recipesDisplay(newArray);
 	}
 }
 
-function resetRecipes(){
-	recipesSection.innerHTML = ``
+function resetRecipes() {
+	recipesSection.innerHTML = ``;
 }
